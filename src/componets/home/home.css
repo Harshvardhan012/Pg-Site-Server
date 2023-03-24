@@ -1,0 +1,191 @@
+.section1{
+    text-align: center;
+    margin-top: 88px;
+}
+
+.serachsection{
+    margin-top: 50px;
+    width: 650px;
+    height: 50px;
+}
+
+.searchtext{
+    border: 2px solid blue;
+    outline: none;
+    border-right: 0px;
+    width: 700px;
+    padding-left: 30px;
+}
+
+.serachion{
+    border: 2px solid blue;
+    border-left: 0px;
+    background-color: #FFFFFF;
+    padding-top: 15px;
+    padding-right: 12px;
+    cursor: pointer;
+}
+
+.search-submit{
+    background: #014073;
+    width: 200px;
+    color: #fff;
+}
+
+
+.city{
+    box-shadow: rgba(246, 245, 248, 0.35) 0px 5px 15px;
+    background-color: rgb(237, 244, 243);
+    border-radius: 20px;
+    width: 55%;
+    height: fit-content;
+    flex-wrap: wrap;
+}
+
+
+.longimg{
+    width: 100%;
+}
+
+.about{
+    margin-top: 70px;
+}
+
+.tex{
+    font-size: 28px;
+    color: #333;
+    line-height: 35px;
+    font-weight: 400;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+
+
+@media screen and (width<579px) and (width > 420px){
+    .serachsection{
+        margin-top: 50px;
+        width: 100px;
+        height: 50px;
+    }
+    
+    .serachsection{
+        margin-top: 50px;
+        width: 700px;
+        height: 50px;
+        padding: 0%;
+        margin-left: 10%;
+    }
+    
+    .searchtext{
+        border: 2px solid blue;
+        outline: none;
+        border-right: 0px;
+        width: 200px;
+    }
+
+    .search-submit{
+        background: #014073;
+        width: 120px;
+        color: #fff;
+    }
+}
+
+@media screen and (width<=420px) and (width >=313px){
+    .serachsection{
+        margin-top: 50px;
+        width: 200px;
+        height: 50px;
+    }
+    
+    .serachsection{
+        margin-top: 50px;
+        width: 400px;
+        height: 50px;
+        padding-left: 0%;
+    }
+    
+    .searchtext{
+        padding-left: 4px;
+        border: 2px solid blue;
+        outline: none;
+        border-right: 0px;
+        width: 180px;
+        font-size: 12px;
+    }
+
+    .search-submit{
+        background: #014073;
+        width: 80px;
+        color: #fff;
+        padding-left: 0%;
+        margin-left: 0%;
+        font-size: 10px;
+    }
+}
+
+@media screen and (width<313px) and (width > 100px){
+    
+    .serachsection{
+        margin-top: 50px;
+        width: 100px;
+        height: 50px;
+        padding-left: 0%;
+        margin-left: 0%;
+    }
+    .serachsection{
+        margin-top: 50px;
+        width: 700px;
+        height: 50px;
+        padding: 0%;
+        margin-left: 10%;
+    }
+    
+    .searchtext{
+        border: 2px solid blue;
+        outline: none;
+        border-right: 0px;
+        width: 115px;
+        padding-left: 0%;
+    }
+
+    .search-submit{
+        background: #014073;
+        width: 70px;
+        color: #fff;
+        font-size: 8px;
+    }
+}
+
+@media screen and (width<=420px) and (width >=313px){
+    .serachsection{
+        margin-top: 50px;
+        width: 200px;
+        height: 50px;
+    }
+    
+    .serachsection{
+        margin-top: 50px;
+        width: 400px;
+        height: 50px;
+        padding-left: 0%;
+    }
+    
+    .searchtext{
+        padding-left: 4px;
+        border: 2px solid blue;
+        outline: none;
+        border-right: 0px;
+        width: 180px;
+        font-size: 12px;
+    }
+
+    .search-submit{
+        background: #014073;
+        width: 80px;
+        color: #fff;
+        padding-left: 0%;
+        margin-left: 0%;
+        font-size: 10px;
+    }
+}
