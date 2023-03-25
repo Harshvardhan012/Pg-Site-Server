@@ -1,6 +1,6 @@
 .section1{
     text-align: center;
-    margin-top: 88px;
+    margin-top: 78px;
 }
 
 .serachsection{
@@ -52,14 +52,115 @@
 }
 
 .tex{
-    font-size: 28px;
+    font-size: 16px;
     color: #333;
-    line-height: 35px;
-    font-weight: 400;
-    padding: 0px;
-    margin-bottom: 20px;
+    font-weight: 600;
 }
 
+
+.leftabout{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.btn{
+    border: 2px solid #019fe9;
+    font-weight: 500;
+    color: #019fe9;
+    padding: 10px 3px;
+    border-radius: 35px;
+    width: 130px;
+    display: inline-block;
+}
+
+.img-responsive{
+    width: auto;
+    height: 550px;
+}
+
+
+.rightsection{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tex2{
+    padding-left: 100px;
+    padding-right: 100px;
+    font-weight: 600;
+}
+
+.worktex{
+    font-size: 22px;
+    text-align: center;
+    color: rgb(1, 159, 233);
+    margin-bottom: 10px;
+    padding: 0px;
+    line-height: 30px;
+    margin: 0 0 10px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.w_logo{
+    width: 200px;
+    height: 170px;
+    border-radius: 20px;
+    padding-top: 25px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(1, 159, 233, 0.3);
+}
+
+.w_div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 12%
+}
+.texdesc{
+    display: flex;
+    font-weight: 700;
+    flex-wrap: wrap;
+    
+}
+
+.o_logo{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (width<990px) and (width > 550px){
+    .img-responsive{
+        width: 300px;
+        height: 450px;
+    }    
+}
+
+@media screen and (width<550px) and (width > 343px){
+    .img-responsive{
+        margin-top: 70px;
+        width: 200px;
+        height: 350px;
+    }    
+}
+
+@media screen and (width<343px) and (width > 200px){
+    .img-responsive{
+        margin-top: 70px;
+        width: 100px;
+        height: 250px;
+    }    
+}
 
 
 @media screen and (width<579px) and (width > 420px){
