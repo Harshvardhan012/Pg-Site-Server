@@ -8,7 +8,6 @@ const Search = (props) => {
         <div className='pg_details'>
 
             <div className='pg_div container'>
-
                 <div className='div_img'>
                     <img src={props.img} alt="lodaing" className='pg_img' />
                 </div>
@@ -26,7 +25,8 @@ const Search = (props) => {
                 <div>
                     {/* Addrress */}
                     <p>
-                        <b>Location</b> : {props.Address}
+                        <b>Location</b> : {props.Address} 
+                        
                     </p>
                 </div>
 
