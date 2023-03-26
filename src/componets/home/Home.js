@@ -25,13 +25,14 @@ const Home = () => {
                 {
                     data.map((data, k) => {
                         return (
-                            <Link to= {`search/${data.name}`} style={{textDecoration:'none' ,color:'black'}}>
+                            <Link to= {`search/${data.name}`} style={{textDecoration:'none' ,color:'black'}} key ={k}>
                                 <div className='component'>
                                     <div>
                                         <img src={data.img} alt="" className='img' />
                                     </div>
                                     <h5 className='imgs my-1'>{data.name}</h5>
                                 </div>
+                                
                             </Link>
                         )
                     })
