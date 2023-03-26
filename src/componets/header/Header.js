@@ -10,7 +10,7 @@ const Header = () => {
     <>
       <nav className="navbar navbar-expand-lg col">
         <div className="container-fluid">
-          <Link className="navbar-brand logotext" to="/"><img src={logo} alt="Logo Loading" className='logo'  /><b style={{ color: color }}>Book My PG</b></Link>
+          <Link className="navbar-brand logotext" to="/"><img src={logo} alt="Logo Loading" className='logo'  /><b style={{ color: color }}>Find My PG</b></Link>
 
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
