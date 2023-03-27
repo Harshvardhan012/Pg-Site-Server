@@ -1,14 +1,11 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams ,Link } from 'react-router-dom'
 import { data } from '../../data/result'
-import './pgcites.css'
-
+import './pgcites.css'              
 
 
 const Pgcites = () => {
     let { city } = useParams();
-
-    // let [citydata, setcitydata] = useState(data);
     let citydata = data;
 
     citydata = citydata.filter(function (a) {
@@ -88,7 +85,7 @@ const Pgcites = () => {
 
                                             {/* View Pg Details Button */}
                                             <div className='div_btn'>
-                                                <button className='btn'>View Details</button>
+                                                <Link className='btn' to={`pgdetails/${data.id}`}>View Details</Link>
                                             </div>
                                         </div>
 

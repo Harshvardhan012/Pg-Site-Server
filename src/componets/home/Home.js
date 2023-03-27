@@ -1,23 +1,61 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './home.css'
 import { data } from '../../data/data'
+import { b_data } from '../../data/bengaluru_data'
 import { Link } from "react-router-dom"
 
 const Home = () => {
     const color = "#041073";
+    let search_data = b_data;
+    let [text, settext] = useState('');
+    const onchange = (text) => {
+        settext(text);
+    }
+
+
+    const cleartext = (e) => {
+        console.log("working");
+        settext('');
+    }
+
     return (
+
         <div>
             <div className="container section1">
                 <h1 style={{ color: color }}>Find My PG</h1>
                 <p style={{ fontSize: 20 }}>India's Largest PG Network to Find your PG Online</p>
             </div>
 
-            <div className='container input-group mb-3'>
+            {/* Search data */}
+            <div className='container input-group mb-3 d-flex'>
+
                 <div className='d-flex serachsection container'>
-                    <input type="text" placeholder='Enter city name, area etc..' className='searchtext' /> <i className="fa-solid fa-magnifying-glass serachion"></i>
+                    <input type="text" placeholder='Enter city name, area etc..' className='searchtext' name="search" value={text} onChange={(e) => onchange(e.target.value)} autoComplete='off'/>
+                    <i className="fa-solid fa-xmark  serachion" onClick={cleartext}></i>
                     <button type="button" id="search" className="search-submit"><i className="fa-solid fa-location-dot px-2"></i>Near me</button>
                 </div>
             </div>
+
+            <div>
+                {
+                    text &&
+                    <ul className='search_result list-group'>
+                        {
+                            search_data.filter(search => search.Address.toLowerCase().includes(text.toLowerCase())).map(search => (
+                                <Link to={`pgdetails/${search.id}`} style={{textDecoration:'none'}}>
+                                    <li className='list_item list-group-item '>
+                                        <i className="fa-sharp fa-solid fa-location-dot fa-beat-fade location_icon" style={{ color: "#ee1b65" }}>
+                                        </i>
+                                        {search.Address}
+                                    </li>
+                                </Link>
+                            ))
+                        }
+                    </ul>
+                }
+            </div>
+
+            {/* search results */}
 
             {/* Citys */}
 
@@ -25,14 +63,14 @@ const Home = () => {
                 {
                     data.map((data, k) => {
                         return (
-                            <Link to= {`search/${data.name}`} style={{textDecoration:'none' ,color:'black'}} key ={k}>
+                            <Link to={`search/${data.name}`} style={{ textDecoration: 'none', color: 'black' }} key={k}>
                                 <div className='component'>
                                     <div>
                                         <img src={data.img} alt="" className='img' />
                                     </div>
                                     <h5 className='imgs my-1'>{data.name}</h5>
                                 </div>
-                                
+
                             </Link>
                         )
                     })
@@ -128,12 +166,10 @@ const Home = () => {
                             <img src="https://bookmypg.co.in/assets/front/images/best-deals-icon.png" alt="" height={63} width={63} />
                         </div>
                         <p className='worktex'>Best Deals On PGs</p>
-                        <p className='texdesc my-2'>We have tie ups with PGs in every city. We make sure that You Can get the best deals for PGs. </p>
+                        <p className='texdesc my-2'>We have tie ups with PGs in every city. We make sure that You get the best deals for PGs. </p>
                     </div>
                 </div>
             </div>
-
-
         </div >
 
     )
