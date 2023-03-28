@@ -1,13 +1,21 @@
 import React from 'react'
-import { data } from '../../data/result'
+import { useParams } from 'react-router-dom'
+import { data } from '../../data/pgdata'
+import './details.css'
 
 const Details = () => {
+
+    let { id } = useParams();
+
+    let pg = data.filter(function (e) {
+        return (e.id == `${id}`);
+    });
     return (
         <>
             {/* Upper section */}
-            <div>
+            <div className='upper_section'>
                 <div>
-                    <p> Rent : {data.rent} </p>
+                    <p> Rent : {pg[0].Price} </p>
                 </div>
             </div>
 

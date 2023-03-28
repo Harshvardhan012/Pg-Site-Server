@@ -9,6 +9,8 @@
 .filter{
     width: 20%;
     height: 688px;
+    position: sticky;
+    top: 65px;
     background-color: aqua;
 }
 
@@ -18,10 +20,7 @@
     background-color: rgb(202, 240, 227);
 }
 
-.upper{
-    margin-top: 20px;
-    margin-left: 10%;
-}
+
 
 .pg_details{
     box-shadow: rgba(62, 24, 138, 0.35) 0px 5px 15px;
@@ -34,19 +33,19 @@
 
 
 .div_img{
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
-    justify-content: center;
-    background-size: contain;
+    /* justify-content: center; */
+    background-size: cover;
 }
 
 
 .pg_img{
     height: 200px;
-    width: 500px;
+    width: fit-content;
     border-radius: 10px;
     border: 2px solid black;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .div_name{
@@ -70,4 +69,33 @@
     border-radius: 10px;
     width: 30%;
     font-size: 12px;
+}
+
+.div_location{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.upper{
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    padding-left: 10%;
+    height: 100px;
+    z-index: 1;
+    background-color: rgb(254, 255, 255);
+    border-radius: 10px;
+}
+
+.drop{
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+
+.sort_button{
+    margin-left: 850%;
+}
+
+.sort_by_div{
+    position: sticky;
+    top: 50px;
 }

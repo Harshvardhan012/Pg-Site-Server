@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import './home.css'
-import { data } from '../../data/data'
-import { b_data } from '../../data/bengaluru_data'
+import './responsive.css'
+import { city_data } from '../../data/citydata'
+import { data } from '../../data/pgdata'
 import { Link } from "react-router-dom"
 
 const Home = () => {
     const color = "#041073";
-    let search_data = b_data;
+    let search_data = data;
     let [text, settext] = useState('');
     const onchange = (text) => {
         settext(text);
@@ -36,7 +37,8 @@ const Home = () => {
                 </div>
             </div>
 
-            <div>
+                {/* search results */}
+            <div >
                 {
                     text &&
                     <ul className='search_result list-group'>
@@ -46,7 +48,7 @@ const Home = () => {
                                     <li className='list_item list-group-item '>
                                         <i className="fa-sharp fa-solid fa-location-dot fa-beat-fade location_icon" style={{ color: "#ee1b65" }}>
                                         </i>
-                                        {search.Address}
+                                        {search.Address.substring(0, 55)}   
                                     </li>
                                 </Link>
                             ))
@@ -55,13 +57,12 @@ const Home = () => {
                 }
             </div>
 
-            {/* search results */}
 
             {/* Citys */}
 
             <div className='container d-flex city'>
                 {
-                    data.map((data, k) => {
+                    city_data.map((data, k) => {
                         return (
                             <Link to={`search/${data.name}`} style={{ textDecoration: 'none', color: 'black' }} key={k}>
                                 <div className='component'>
