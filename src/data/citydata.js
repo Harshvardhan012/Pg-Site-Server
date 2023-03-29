@@ -33,7 +33,7 @@ export const city_data = [
     },
     {
         "img": "https://bookmypg.co.in/assets/front/images/pune.jpg",
-        "name": "Gurgoan"
+        "name": "Jaipur"
     }
 ]
 

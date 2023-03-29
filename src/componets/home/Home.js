@@ -33,7 +33,7 @@ const Home = () => {
                 <div className='d-flex serachsection container'>
                     <input type="text" placeholder='Enter city name, area etc..' className='searchtext' name="search" value={text} onChange={(e) => onchange(e.target.value)} autoComplete='off'/>
                     <i className="fa-solid fa-xmark  serachion" onClick={cleartext}></i>
-                    <button type="button" id="search" className="search-submit"><i className="fa-solid fa-location-dot px-2"></i>Near me</button>
+                    <button type="button" id="search" className="search-submit"><i class="fa-solid fa-location-dot px-2"></i> Near me</button>
                 </div>
             </div>
 
@@ -102,7 +102,7 @@ const Home = () => {
             {/* How Work */}
             <div>
                 <hr className='my-5' />
-                <h1 style={{ color: color }} className='my-5 text-center'>How it's Work</h1>
+                <h1 style={{ color: color }} className='my-5 text-center'>How it Work's</h1>
 
                 <div className='container tex2'>
                     <p>Our process is simple and very different from those of others in this industry. The search process is streamlined by the locality or landmark of your choice. This allows you to find the right PG or Room.</p>
