@@ -1,7 +1,5 @@
-
-
-
-export const  data = [
+// eslint-disable-next-line
+export const data = [
 
     {
         "id":1,
@@ -22,8 +20,9 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"siker"
-
+        "city" :"siker",
+        "pincode":"302013"
+        
     },
     {
         
@@ -40,13 +39,14 @@ export const  data = [
         "src10": "https://bookmypg.co.in/storage/property/medium/2022/11/bdbe4067bbb03ba0813b616652aa859e0347441.jpeg",
         "src11": "https://bookmypg.co.in/storage/property/medium/2021/01/18e2999891374a475d0687ca9f989d830467589.jpeg",
         "src12": "https://bookmypg.co.in/storage/property/medium/2021/01/156005c5baf40ff51a327f1c34f2975b0822439.jpeg",
-
+        
         "pg_name": "Annaporneshwari PG Accomodation",
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"New Delhi"
-
+        "city" :"New Delhi",
+        "pincode":"302025"
+        
     },
     {
         
@@ -68,7 +68,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"Mumbai"
+        "city" :"Mumbai",
+        "pincode":"302025"
 
     },
     {
@@ -91,7 +92,9 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"Mumbai"
+        "city" :"Mumbai",
+        "pincode":"302015"
+
 
     },
     {
@@ -113,7 +116,9 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"Mumbai"
+        "city" :"Mumbai",
+        "pincode":"302025"
+
 
     },
     {
@@ -135,7 +140,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"Mumbai"
+        "city" :"Mumbai",
+        "pincode":"302035"
 
     },
     {
@@ -157,7 +163,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 loha mandi ",
         "Price" :  5500,
-        "city" :"Bengaluru"
+        "city" :"Bengaluru",
+        "pincode":"302028"
 
     },
     {
@@ -179,7 +186,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"Bengaluru"
+        "city" :"Bengaluru",
+        "pincode":"302028"
 
     },
     {
@@ -201,7 +209,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"Kolkata"
+        "city" :"Kolkata",
+        "pincode":"302025"
 
     },
     {
@@ -223,7 +232,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"Kolkata"
+        "city" :"Kolkata",
+        "pincode":"302025"
         
     },
     {
@@ -245,7 +255,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"Indore"
+        "city" :"Indore",
+        "pincode":"302020"
 
     },
     {
@@ -267,7 +278,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"Indore"
+        "city" :"Indore",
+        "pincode":"302021"
 
     },
     {
@@ -289,7 +301,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 6000,
-        "city" :"Indore"
+        "city" :"Indore",
+        "pincode":"303025"
 
     },
     {
@@ -311,7 +324,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"Gurgoan"
+        "city" :"Gurgoan",
+        "pincode":"302025"
 
     },
     {
@@ -333,7 +347,8 @@ export const  data = [
         "Gender": "male",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 9000,
-        "city" :"Chennai"
+        "city" :"Chennai",
+        "pincode":"302013"
 
     },
     {
@@ -355,7 +370,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 6000,
-        "city" :"Chennai"
+        "city" :"Chennai",
+        "pincode":"302013"
 
     },
     {
@@ -377,7 +393,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 600,
-        "city" :"Chennai"
+        "city" :"Chennai",
+        "pincode":"302013"
 
     },
     ,
@@ -400,7 +417,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 10000,
-        "city" :"Chennai"
+        "city" :"Chennai",
+        "pincode":"302025"
 
     },
     {
@@ -423,7 +441,8 @@ export const  data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 700,
         "city" :"Chennai"
-
+        ,
+        "pincode":"302025"
     },
     {
         "id":19,
@@ -444,7 +463,8 @@ export const  data = [
         "Gender": "female",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 2000,
-        "city" :"Chennai"
+        "city" :"Chennai",
+        "pincode":"302025"
 
     },
     {
@@ -466,7 +486,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"New Delhi"
+        "city" :"New Delhi",
+        "pincode":"302024"
         
     },
     {
@@ -488,8 +509,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
-        "city" :"siker"
-
+        "city" :"siker",
+        "pincode":"302024"
     },
     {
         "id":22,
@@ -510,7 +531,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 100,
-        "city" :"Chennai"
+        "city" :"Chennai",
+        "pincode":"302027"
 
     },
     {
@@ -532,7 +554,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 100,
-        "city" :"Chennai"
+        "city" :"Chennai",
+        "pincode":"302026"
 
     },
     {
@@ -554,7 +577,8 @@ export const  data = [
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, punjab 560040scaascscidhscvdsghcbgdyushgxcbydusahgxbchsdbxyuchbud sandnsacndsvjd fvjdfnvcdjndcjnsjbcx ",
         "Price" :  5500,
-        "city" :"gurgaon"
+        "city" :"gurgaon",
+        "pincode":"302020"
 
     }
 

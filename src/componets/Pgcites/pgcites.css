@@ -118,3 +118,38 @@
     padding-left: 3%;
     padding-top: 25px;
 }
+
+
+.pin_search{
+    border: 1px solid black;
+    border-left: 0px;
+    background-color: #FFFFFF;
+    padding-top: 6.1px;
+    padding-bottom: 4px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+
+.pin_enter{
+    margin-top: 4px;
+    border: 1px solid black;
+    padding-left: 5px;
+    border-right: none;
+    width: 120px;
+    border-right: 0px;
+    outline: none;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
