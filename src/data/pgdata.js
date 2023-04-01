@@ -274,8 +274,22 @@ export const data = [
         "src11": "https://bookmypg.co.in/storage/property/medium/2021/01/18e2999891374a475d0687ca9f989d830467589.jpeg",
         "src12": "https://bookmypg.co.in/storage/property/medium/2021/01/156005c5baf40ff51a327f1c34f2975b0822439.jpeg",
 
-        "pg_name": "Annaporneshwari PG Accomodation",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+        "pg_name": "Annaporneshwari PG Accomodation sdsafcdsjvn sdnsjfndsj fdnvdfnjfndsjvndf",
         "Gender": "unisex",
+        "deposit": "₹ 10000",
+        "maintenance": "no",
+        "notice_period": 1,
+        "water_charges":"no",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"Indore",
@@ -297,12 +311,13 @@ export const data = [
         "src11": "https://bookmypg.co.in/storage/property/medium/2021/01/18e2999891374a475d0687ca9f989d830467589.jpeg",
         "src12": "https://bookmypg.co.in/storage/property/medium/2021/01/156005c5baf40ff51a327f1c34f2975b0822439.jpeg",
 
-        "pg_name": "Annaporneshwari PG Accomodation",
+        "pg_name": "Annaporneshwari PG Accomodation sadascsdchbvdhjbvc hello wpikfdsh dsnadjn",
         "Gender": "unisex",
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 6000,
         "city" :"Indore",
-        "pincode":"303025"
+        "pincode":"303025",
+        "area":"jagatpura"
 
     },
     {

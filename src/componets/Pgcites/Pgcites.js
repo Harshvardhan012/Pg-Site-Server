@@ -13,6 +13,11 @@ const Pgcites = () => {
     let pin = document.getElementById('pin');
 
 
+    // silde
+    // silde
+
+
+
     const clearfilter = () => {
         const btn = [];
         btn[0] = document.getElementById('flexRadioDisabled1');
@@ -71,7 +76,7 @@ const Pgcites = () => {
 
     const malefilter = () => {
         var pincode = pin.value.toString();
-        
+
         var newdata = data.filter(function (a) {
             return a.Gender.toLowerCase() === 'male' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.pincode.match(pincode);
         })
@@ -83,23 +88,23 @@ const Pgcites = () => {
     const femalefilter = () => {
         var pincode = pin.value.toString();
         var newdata = data.filter(function (a) {
-            return a.Gender.toLowerCase() === 'female' && a.city.toLowerCase() === `${city.toLowerCase()}`  && a.pincode.match(pincode);
+            return a.Gender.toLowerCase() === 'female' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.pincode.match(pincode);
         })
         setgenderfilter("female");
         setcitydata(newdata);
         renttogenderfilterswitch();
     }
-    
+
     const unisexfilter = () => {
         var pincode = pin.value.toString();
         var newdata = data.filter(function (a) {
-            return a.Gender.toLowerCase() === 'unisex' && a.city.toLowerCase() === `${city.toLowerCase()}`  && a.pincode.match(pincode);
+            return a.Gender.toLowerCase() === 'unisex' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.pincode.match(pincode);
         })
         setgenderfilter("unisex");
         setcitydata(newdata);
         renttogenderfilterswitch();
     }
-    
+
     const under5000filter = () => {
         var pincode = pin.value.toString();
         var newdata;
@@ -113,7 +118,7 @@ const Pgcites = () => {
                 return a.Gender.toLowerCase() === 'female' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price < 5000 && a.pincode.match(pincode)
             });
         }
-        
+
         else if (genderfilter === 'unisex') {
             newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'unisex' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price < 5000 && a.pincode.match(pincode)
@@ -126,7 +131,7 @@ const Pgcites = () => {
         }
         setcitydata(newdata);
     }
-    
+
     const val5000to7500filter = () => {
         var pincode = pin.value.toString();
         var newdata;
@@ -140,7 +145,7 @@ const Pgcites = () => {
                 return a.Gender.toLowerCase() === 'female' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 5000 && a.Price < 7500 && a.pincode.match(pincode)
             });
         }
-        
+
         else if (genderfilter === 'unisex') {
             newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'unisex' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 5000 && a.Price < 7500 && a.pincode.match(pincode)
@@ -153,7 +158,7 @@ const Pgcites = () => {
         }
         setcitydata(newdata);
     }
-    
+
     const val7500to10000filter = () => {
         var pincode = pin.value.toString();
         var newdata;
@@ -180,13 +185,13 @@ const Pgcites = () => {
         }
         setcitydata(newdata);
     }
-    
+
     const morethan10000filter = () => {
         var pincode = pin.value.toString();
         var newdata;
         if (genderfilter === 'male') {
             newdata = data.filter(function (a) {
-                return a.Gender.toLowerCase() === 'male' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 10000 && a.pincode.match(pincode) 
+                return a.Gender.toLowerCase() === 'male' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 10000 && a.pincode.match(pincode)
             });
         }
         else if (genderfilter === 'female') {
@@ -212,18 +217,18 @@ const Pgcites = () => {
         var pincode = pin.value.toString();
         var newdata;
         console.log(genderfilter);
-            if (pincode.length > 0 && genderfilter === 'all') {
-                newdata = data.filter(function (a) {
-                    return a.pincode.match(pincode)&& a.city.toLowerCase() === `${city.toLowerCase()}`
-                })
-            }
-            else{
-                newdata = data.filter(function (a) {
-                    return a.pincode.match(pincode) && a.Gender.toLowerCase() === genderfilter;
-                })
-            }
-            setcitydata(newdata);
-      
+        if (pincode.length > 0 && genderfilter === 'all') {
+            newdata = data.filter(function (a) {
+                return a.pincode.match(pincode) && a.city.toLowerCase() === `${city.toLowerCase()}`
+            })
+        }
+        else {
+            newdata = data.filter(function (a) {
+                return a.pincode.match(pincode) && a.Gender.toLowerCase() === genderfilter;
+            })
+        }
+        setcitydata(newdata);
+
     }
 
 
@@ -310,7 +315,7 @@ const Pgcites = () => {
                     <div className='filter1'>
                         <label htmlFor="number" style={{ color: '#041073', fontSize: 16 }}><b>Search by Pincode</b></label>
                         <div className='pin_div'>
-                            <input name="pincode" id='pin' type="number" inputMode="numeric" maxLength="4" autoComplete='false' className='pin_enter' placeholder='Enter Pincode'/><i className="fa-solid fa-magnifying-glass pin_search" onClick={search_by_pin}></i>
+                            <input name="pincode" id='pin' type="number" inputMode="numeric" maxLength="4" autoComplete='false' className='pin_enter' placeholder='Enter Pincode' /><i className="fa-solid fa-magnifying-glass pin_search" onClick={search_by_pin}></i>
                         </div>
                     </div>
 
@@ -349,7 +354,7 @@ const Pgcites = () => {
                                         return (
                                             <div className='pg_details' key={k}>
 
-                                               
+
                                                 <div className='pg_div container'>
                                                     <div className='div_img'>
                                                         <img src={data.src12} alt="lodaing" className='pg_img' />
@@ -388,13 +393,13 @@ const Pgcites = () => {
                                                         </p>
                                                     </div>
 
-                                               
+
 
                                                     {/*Rent Details*/}
                                                     <div>
                                                         <p>
                                                             <b>Rent</b> : {data.Price}
-                                                            
+
                                                         </p>
                                                     </div>
 
@@ -421,10 +426,13 @@ const Pgcites = () => {
                                         return (
                                             <div className='pg_details' key={k}>
 
-                                                <div className='pg_div container'>
+                                                <div className='pg_div'>
                                                     <div className='div_img'>
+
                                                         <img src={data.src3} alt="lodaing" className='pg_img' />
+
                                                     </div>
+
 
                                                     {/*pg name and gender logo  */}
                                                     <div className='div_name_logo d-flex' >
