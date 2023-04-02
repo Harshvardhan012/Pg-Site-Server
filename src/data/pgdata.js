@@ -276,12 +276,15 @@ export const data = [
 
         "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
 
-        "pg_name": "Annaporneshwari PG Accomodation sdsafcdsjvn sdnsjfndsj fdnvdfnjfndsjvndf",
+        "pg_name": "Annaporneshwari PG Accomodation ",
         "Gender": "unisex",
-        "deposit": "₹ 10000",
-        "maintenance": "no",
-        "notice_period": 1,
-        "water_charges":"no",
+        "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
+        "Price" :  5500,
+        "city" :"Indore",
+        "pincode":"302021",
+
+        // pg Deatils
+        "area":"Gt",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -290,10 +293,33 @@ export const data = [
         "preferred_tenants":"all",
         "no_of_beds": 162,
         "opertaing_since":2020,
-        "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
-        "Price" :  5500,
-        "city" :"Indore",
-        "pincode":"302021"
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {

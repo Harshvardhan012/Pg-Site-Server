@@ -73,7 +73,8 @@ const Details = () => {
                     </div>
                 </div>
             </div>
-            {/* Lower  */}
+
+            {/* Lower components Link  */}
             <nav className="navbar navbar-expand-lg bg-body-tertiary" >
                 <div className="container-fluid" >
                     <div className="collapse2 navbar-collapse" id="navbarNav" >
@@ -82,7 +83,7 @@ const Details = () => {
                                 <Link className="nav-link" to="">Details</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="">House Rules</Link>
+                                <Link className="nav-link" htmlFor="#house-rule">Pg Rules</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="">Other charges</Link>
@@ -95,7 +96,7 @@ const Details = () => {
                 </div>
             </nav>
 
-            {/* Details Section */}
+            {/*Pg Details Section */}
 
             <div className='pg_deatils container d-flex'>
                 <div className='left_part'>
@@ -122,17 +123,17 @@ const Details = () => {
                 <div className='right_section'>
                     <div>
                         <h3 className='pg_name my-3'>{pg[0].pg_name.substring(0, 50)}</h3>
-                        <p className='pg_desc'>{pg[0].desc.substring(0, 410)}</p>
+                        <p className='pg_desc' style={{ color: '#909090' }}>{pg[0].desc.substring(0, 410)}</p>
                     </div>
 
                     <hr />
 
                     <div class="container">
                         <div class="row">
-                            <div class="col small_div">Deposit Amount</div>
-                            <div class="col small_div">Maintenance</div>
-                            <div class="col small_div">Notice Period</div>
-                            <div class="col small_div">Water Charges</div>
+                            <div class="col small_div" style={{ color: '#909090' }}>Deposit Amount</div>
+                            <div class="col small_div" style={{ color: '#909090' }}>Maintenance</div>
+                            <div class="col small_div" style={{ color: '#909090' }}>Notice Period</div>
+                            <div class="col small_div" style={{ color: '#909090' }}>Water Charges</div>
                         </div>
                         <div class="row">
                             <div class="col"><span className='small_val'>{pg[0].deposit}</span></div>
@@ -146,10 +147,10 @@ const Details = () => {
                     <hr />
                     <div class="container">
                         <div class="row">
-                            <div class="col small_div">Food Availability</div>
-                            <div class="col small_div">AC Rooms</div>
-                            <div class="col small_div">Parking</div>
-                            <div class="col small_div">Power Backup</div>
+                            <div class="col small_div" style={{ color: '#909090' }}>Food Availability</div>
+                            <div class="col small_div" style={{ color: '#909090' }}>AC Rooms</div>
+                            <div class="col small_div" style={{ color: '#909090' }}>Parking</div>
+                            <div class="col small_div" style={{ color: '#909090' }}>Power Backup</div>
                         </div>
                         <div class="row">
                             <div class="col"><span className='small_val'>{pg[0].Food_available.charAt(0).toUpperCase() + pg[0].Food_available.slice(1)}</span></div>
@@ -161,12 +162,12 @@ const Details = () => {
                     </div>
                     <hr />
 
-                    <div class="container">
+                    <div class="container my-3">
                         <div class="row">
-                            <div class="col small_div">Available For</div>
-                            <div class="col small_div">Total Room Available</div>
-                            <div class="col small_div">Preferred Tenants</div>
-                            <div class="col small_div">Operating Since</div>
+                            <div class="col small_div" style={{ color: '#909090' }}>Available For</div>
+                            <div class="col small_div" style={{ color: '#909090' }}>Total Room Available</div>
+                            <div class="col small_div" style={{ color: '#909090' }}>Preferred Tenants</div>
+                            <div class="col small_div" style={{ color: '#909090' }}>Operating Since</div>
                         </div>
                         <div class="row">
                             <div class="col"><span className='small_val'>{pg[0].available_for.charAt(0).toUpperCase() + pg[0].available_for.slice(1)}</span></div>
@@ -180,8 +181,241 @@ const Details = () => {
                     </div>
 
                 </div>
+            </div>
+
+            {/* Pg Rules */}
+
+            <div className='container houserule text-center' id='house-rule'>
+                <div class="row d-flex">
+                    <h3 className='title my-4'> PG Rules</h3>
+                    <div class="col small_div"><i class="fa fa-thin fa-clipboard fa-2xl"></i></div>
+                    <div class="col small_div"><i class="fa fa-light fa-clock fa-2xl"></i></div>
+                    <div class="col small_div"><i class="fa-solid fa-user fa-2xl" ></i></div>
+                    <div class="col small_div"><i class="fa fa-light fa-egg fa-2xl"></i></div>
+                    <div class="col small_div"><i class="fa fa-thin fa-venus-mars fa-2xl"></i></div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col small_div d-flex "><span>Notice Period</span>
+                        <span style={{ color: '#909090' }}>
+                            {
+                                pg[0].Notice_period.length > 0 ? `${pg[0].Notice_period} Month` : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                            }
+
+                        </span>
+                    </div>
+
+                    <div class="col small_div d-flex">
+                        <span>Gate Closing Time</span>
+                        <span style={{ color: '#909090' }}>
+                            {
+                                pg[0].Gate_timing.length > 0 ? `${pg[0].Gate_timing}` :
+                                    <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                            }
+                        </span>
+                    </div>
+
+                    <div class="col small_div d-flex "><span>Visitor Entry</span>
+                        <span style={{ color: '#909090' }}>
+                            {
+                                pg[0].Visitor_Entry.toLowerCase() === "allow" ? <i class="fa-sharp fa-solid fa-circle-check fa-lg" style={{ color: '#54c922' }}></i> : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                            }
+
+                        </span>
+                    </div>
+
+                    <div class="col small_div d-flex">
+                        <span>Non Veg</span>
+                        <span style={{ color: '#909090' }}>
+                            {
+                                pg[0].Non_veg.toLowerCase() === "allow" ? <i class="fa-sharp fa-solid fa-circle-check fa-lg" style={{ color: '#54c922' }}></i> : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                            }
+
+                        </span>
+                    </div>
+
+                    <div class="col small_div d-flex">
+                        <span>Opposite Gender</span>
+                        <span style={{ color: '#909090' }}>
+                            {
+                                pg[0].opposite_gender.toLowerCase() === "allow" ? <i class="fa-sharp fa-solid fa-circle-check fa-lg" style={{ color: '#54c922' }}></i> : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                            }
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="row d-flex" style={{ marginTop: 80 }}>
+                    <div class="col small_div">
+
+                        <i class="fa-sharp fa-solid fa-smoking fa-2xl"></i>
+                        <div class="col small_div d-flex my-3">
+                            <span>Smoking</span>
+                            <span style={{ color: '#909090' }}>
+                                {
+                                    pg[0].Smoking.toLowerCase() === "allow" ? <i class="fa-sharp fa-solid fa-circle-check fa-lg" style={{ color: '#54c922' }}></i> : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                                }
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col small_div"><i class="fa-solid fa-champagne-glasses fa-2xl"></i>
+                        <div class="col small_div d-flex my-3">
+                            <span>Drinking</span>
+                            <span style={{ color: '#909090' }}>
+                                {
+                                    pg[0].Drinking.toLowerCase() === "allow" ? <i class="fa-sharp fa-solid fa-circle-check fa-lg" style={{ color: '#54c922' }}></i> : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                                }
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col small_div"><i class="fa-solid fa-music fa-2xl"></i>
+                        <div class="col small_div d-flex my-3">
+                            <span>Loud Music</span>
+                            <span style={{ color: '#909090' }}>
+                                {
+                                    pg[0].Loud_Music.toLowerCase() === "allow" ? <i class="fa-sharp fa-solid fa-circle-check fa-lg" style={{ color: '#54c922' }}></i> : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                                }
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                </div>
 
             </div>
+
+            {/* Common Area and Amenities */}
+
+            <div className='container houserule text-center' id='house-rule'>
+                <div class="row d-flex">
+                    <h3 className='title my-4'>Common Area and Amenities</h3>
+                    <div class="col small_div"><i class="fa-solid fa-wifi fa-2xl"></i></div>
+                    <div class="col small_div"><i class="fa-solid fa-car-battery fa-2xl"></i></div>
+                    <div class="col small_div"><i class="fa-solid fa-broom fa-2xl"></i></div>
+                    <div class="col small_div"><i class="fa-solid fa-bottle-water fa-2xl"></i></div>
+                    <div class="col small_div"><i class="fa-sharp fa-solid fa-dumbbell fa-2xl"></i></div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col small_div d-flex "><span>Wifi</span>
+                        <span style={{ color: '#909090' }}>
+                        {
+                                    pg[0].wifi.toLowerCase() === "available" ? <i class="fa-sharp fa-solid fa-circle-check fa-lg" style={{ color: '#54c922' }}></i> : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                        }
+                        </span>
+                    </div>
+
+                    <div class="col small_div d-flex">
+                        <span>Power Backup</span>
+                        <span style={{ color: '#909090' }}>
+                        {
+                                    pg[0].Power.toLowerCase() === "available" ? <i class="fa-sharp fa-solid fa-circle-check fa-lg" style={{ color: '#54c922' }}></i> : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                        }
+                        </span>
+                    </div>
+
+                    <div class="col small_div d-flex "><span>Room Cleaning Service</span>
+                        <span style={{ color: '#909090' }}>
+                        {
+                                    pg[0].Room_cleaning.toLowerCase() === "available" ? <i class="fa-sharp fa-solid fa-circle-check fa-lg" style={{ color: '#54c922' }}></i> : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                        }
+
+                        </span>
+                    </div>
+
+                    <div class="col small_div d-flex">
+                        <span>Water Cooler</span>
+                        <span style={{ color: '#909090' }}>
+                        {
+                                    pg[0].Water_cooler.toLowerCase() === "available" ? <i class="fa-sharp fa-solid fa-circle-check fa-lg" style={{ color: '#54c922' }}></i> : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                        }
+
+                        </span>
+                    </div>
+
+                    <div class="col small_div d-flex">
+                        <span>Gym</span>
+                        <span style={{ color: '#909090' }}>
+                        {
+                                    pg[0].Gym.toLowerCase() === "available" ? <i class="fa-sharp fa-solid fa-circle-check fa-lg" style={{ color: '#54c922' }}></i> : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                        }
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="row d-flex" style={{ marginTop: 80 }}>
+                    <div class="col small_div">
+
+                    <i class="fa-solid fa-elevator fa-2xl"></i>
+                        <div class="col small_div d-flex my-3">
+                            <span>Lift</span>
+                            <span style={{ color: '#909090' }}>
+                            {
+                                    pg[0].Lift.toLowerCase() === "available" ? <i class="fa-sharp fa-solid fa-circle-check fa-lg" style={{ color: '#54c922' }}></i> : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                        }
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col small_div"><i class="fa fa-duotone fa-user-secret fa-2xl"></i>
+                        <div class="col small_div d-flex my-3">
+                            <span>Warden</span>
+                            <span style={{ color: '#909090' }}>
+                            {
+                                    pg[0].Warden.toLowerCase() === "available" ? <i class="fa-sharp fa-solid fa-circle-check fa-lg" style={{ color: '#54c922' }}></i> : <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                        }
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                </div>
+
+            </div>
+
+            {/* Other Charges */}
+            <div className='container houserule text-center' id='house-rule'>
+                <div class="row d-flex">
+                    <h3 className='title my-4'> Other Charges</h3>
+                    <div class="col small_div"><i class="fa fa-thin fa-house fa-2xl"></i>
+                        <div class="col small_div d-flex my-3"><span>Maintenance</span>
+                            <span style={{ color: '#909090' }}>
+                                {
+                                    pg[0].maintenance.toLowerCase() === 'no' ? <i class="fa-sharp fa-solid fa-circle-xmark fa-lg " style={{ color: '#e70453' }}></i> : `₹ ${pg[0].maintenance} Month`
+                                }
+
+                            </span></div>
+                    </div>
+                    <div class="col small_div"><i class="fa-solid fa-bolt fa-2xl"></i>
+                        <div class="col small_div d-flex my-3"><span>Water Charges</span>
+                            <span style={{ color: '#909090' }}>
+                                {
+                                    pg[0].water_charges.toLowerCase() === 'no' ? <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i> : `₹ ${pg[0].maintenance} Month`
+                                }
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col small_div"><i class="fa-solid fa-money-bill-transfer fa-2xl"></i>
+                        <div class="col small_div d-flex my-3"><span>Deposit Amount</span>
+                            <span style={{ color: '#909090' }}>
+                                {
+                                    pg[0].deposit.toLowerCase() === 'no' ? <i class="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i> : `₹ ${pg[0].deposit}`
+                                }
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="col small_div"><i class="fa-solid fa-jug-detergent fa-2xl"></i>
+                        <div class="col small_div d-flex my-3"><span>Laundry</span>
+                            <span style={{ color: '#909090' }}>
+                                    {pg[0].laundry}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div >
         </>
     )
 }

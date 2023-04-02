@@ -1,10 +1,10 @@
 .upper_section{
-    /* background-color: aquamarine; */
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
     margin-top: 50px;
     width: 100%;
     height: 120px;
     align-items: center;
+    background-color: aliceblue;
 }
 
 .upperrent{
@@ -69,11 +69,13 @@
 }
 
 .collapse2{
-    margin: 10px;
+    margin: 0px;
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
+    /* background-color:#feebeb; */
+    
 }
 
 .pg_deatils{
@@ -90,7 +92,7 @@
     height: 270px;
     overflow: hidden;
     border-radius: 5px;
-    border: 3px solid black;
+    border: 2px solid  rgb(144, 144, 144);;
     margin-top: 29px;
 }
 
@@ -182,3 +184,18 @@
     background-color: aliceblue;
 }
 
+
+.houserule{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: aliceblue;
+    margin-top: 70px;
+    width: 1200px;
+    height: 300px;
+    margin-bottom: 70px;
+}
+
+.title{
+    font-size: 20px;
+    padding-left: 15px;
+    font-weight: 600;
+}
