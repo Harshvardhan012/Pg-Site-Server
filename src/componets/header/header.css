@@ -11,7 +11,7 @@
 }
 
 
-.col
+/* .col
 {
     position: sticky;
     top: 0;
@@ -19,4 +19,9 @@
     padding-bottom: 0%;
     background-color: #64b077;
 }
+
+.buttons{
+    float: right;
+    width: 170px;
+} */
 

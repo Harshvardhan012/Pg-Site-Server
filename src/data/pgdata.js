@@ -21,9 +21,52 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"siker",
-        "pincode":"302013"
+        "pincode":"302013",
+
         
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
+
     },
+        
     {
         
         "id":2,
@@ -45,7 +88,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"New Delhi",
-        "pincode":"302025"
+        "pincode":"302025",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
         
     },
     {
@@ -69,7 +152,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"Mumbai",
-        "pincode":"302025"
+        "pincode":"302025",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -93,7 +216,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"Mumbai",
-        "pincode":"302015"
+        "pincode":"302015",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
 
     },
@@ -117,7 +280,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"Mumbai",
-        "pincode":"302025"
+        "pincode":"302025",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
 
     },
@@ -141,7 +344,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"Mumbai",
-        "pincode":"302035"
+        "pincode":"302035",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -164,7 +407,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 loha mandi ",
         "Price" :  5500,
         "city" :"Bengaluru",
-        "pincode":"302028"
+        "pincode":"302028",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -187,7 +470,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"Bengaluru",
-        "pincode":"302028"
+        "pincode":"302028",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -210,7 +533,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"Kolkata",
-        "pincode":"302025"
+        "pincode":"302025",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -233,7 +596,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"Kolkata",
-        "pincode":"302025"
+        "pincode":"302025",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
         
     },
     {
@@ -256,7 +659,46 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"Indore",
-        "pincode":"302020"
+        "pincode":"302020", "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -343,7 +785,47 @@ export const data = [
         "Price": 6000,
         "city" :"Indore",
         "pincode":"303025",
-        "area":"jagatpura"
+        "area":"jagatpura",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -366,7 +848,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"Gurgoan",
-        "pincode":"302025"
+        "pincode":"302025",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -389,7 +911,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 9000,
         "city" :"Chennai",
-        "pincode":"302013"
+        "pincode":"302013",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -412,7 +974,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 6000,
         "city" :"Chennai",
-        "pincode":"302013"
+        "pincode":"302013",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -435,7 +1037,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 600,
         "city" :"Chennai",
-        "pincode":"302013"
+        "pincode":"302013",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     ,
@@ -459,7 +1101,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 10000,
         "city" :"Chennai",
-        "pincode":"302025"
+        "pincode":"302025",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -483,7 +1165,47 @@ export const data = [
         "Price": 700,
         "city" :"Chennai"
         ,
-        "pincode":"302025"
+        "pincode":"302025",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
     },
     {
         "id":19,
@@ -505,7 +1227,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 2000,
         "city" :"Chennai",
-        "pincode":"302025"
+        "pincode":"302025",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -528,7 +1290,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"New Delhi",
-        "pincode":"302024"
+        "pincode":"302024",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
         
     },
     {
@@ -551,7 +1353,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price" :  5500,
         "city" :"siker",
-        "pincode":"302024"
+        "pincode":"302024",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
     },
     {
         "id":22,
@@ -573,7 +1415,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 100,
         "city" :"Chennai",
-        "pincode":"302027"
+        "pincode":"302027",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -596,7 +1478,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, siker 560040 ",
         "Price": 100,
         "city" :"Chennai",
-        "pincode":"302026"
+        "pincode":"302026",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     },
     {
@@ -619,7 +1541,47 @@ export const data = [
         "Address": "46/21st Main Road Vijayanagar, punjab 560040scaascscidhscvdsghcbgdyushgxcbydusahgxbchsdbxyuchbud sandnsacndsvjd fvjdfnvcdjndcjnsjbcx ",
         "Price" :  5500,
         "city" :"gurgaon",
-        "pincode":"302020"
+        "pincode":"302020",
+        "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
+
+
+        // pg Deatils
+        "area":"Gt",
+        "Food_available":"Veg",
+        "ac_room":"available",
+        "parking":"available",
+        "power_backup":"no",
+        "available_for":"Boys & Girls",
+        "preferred_tenants":"all",
+        "no_of_beds": 162,
+        "opertaing_since":2020,
+        
+        // other charges
+        "maintenance": "no",
+        "water_charges":"no",
+        "deposit": "10000",
+        "laundry": "Available",
+
+
+        // House Rules
+        "Notice_period": "1",
+        "Gate_timing": "",
+        "Visitor_Entry": "allow",
+        "Non_veg": "not-allowed",
+        "opposite_gender": "allow",
+        "Smoking": "allow",
+        "Drinking": "allow",
+        "Loud_Music": "allow",
+        "Paty": "allow",
+
+        // Common Area and Amentites
+        "wifi" : "available",
+        "Power" : "available",
+        "Room_cleaning" : "available",
+        "Water_cooler" : "available",
+        "Gym" : "not available",
+        "Lift" : "not available",
+        "Warden" : "Not Available",
 
     }
 
