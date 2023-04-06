@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -25,10 +25,9 @@ const Login = () => {
         const json = await response.json();
         if (json.success) {
             // save the token and redirect 
+            console.log("Success");
             localStorage.setItem('token', json.token);
 
-            // this is used to Navigate to home page
-            Navigate('/');
             toast.success('Login Successfully', {
                 position: "top-center",
                 autoClose: 1200,
@@ -39,6 +38,10 @@ const Login = () => {
                 progress: undefined,
                 theme: "dark",
                 });
+
+            // this is used to Navigate to home page
+            Navigate('/');
+           
             
         }
         else {
@@ -87,7 +90,7 @@ const Login = () => {
                     <label htmlFor="password" className="form-label" >Password</label>
                     <input type="password" className="form-control" value={details.password} onChange={changehandler} id="password" name="password" />
                 </div>
-                <button type="submit" className="btn btn-primary">Login</button>
+                <button type="submit" className="btn btn-primary button">Login</button>
             </form>
         </div>
     )

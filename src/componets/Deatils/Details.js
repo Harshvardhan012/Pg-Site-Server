@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { data } from '../../data/pgdata'
 import './details.css'
@@ -7,12 +7,12 @@ const Details = () => {
 
     let { id } = useParams();
 
+
     let pg = data.filter(function (e) {
         // eslint-disable-next-line 
         return (e.id == `${id}`);
     });
 
-    const ref = useRef(null);
 
 
     let sliderContainer;

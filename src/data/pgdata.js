@@ -28,7 +28,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"Gt12",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -93,7 +93,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"Gt111",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -157,7 +157,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"t",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -221,7 +221,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"loha",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -285,7 +285,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"mandi",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -349,7 +349,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"siker",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -412,7 +412,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"jk",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -475,7 +475,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"lk",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -538,7 +538,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"sad",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -601,7 +601,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"fdsf",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -663,7 +663,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"gfds",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -726,7 +726,8 @@ export const data = [
         "pincode":"302021",
 
         // pg Deatils
-        "area":"Gt",
+        // eslint-disable-next-line 
+        "area":"wefec",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -785,12 +786,11 @@ export const data = [
         "Price": 6000,
         "city" :"Indore",
         "pincode":"303025",
-        "area":"jagatpura",
         "desc":"Move Into Hooliv Sunshine Homes, A Professionally Managed PG Home In The Jagatpura, Jaipur. Located In A Safe Neighborhood, This Unisex PG Offers Various Modern Amenities For Your Comfort, Such As Tv, Ac, Food, Wi-Fi, Etc. This PG has Single, Double, and Triple Occupancy Types. This PG Is Nearby Major Commercial and Educational Hubs. Please Contact The Seller to Book This Fast-Selling High In Demand PG Stay",
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"vfd",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -853,7 +853,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"Gt2",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -916,7 +916,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"Gt4",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -979,7 +979,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"vfd",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -1042,7 +1042,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"wed",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -1106,7 +1106,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"gef",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -1170,7 +1170,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"rgbvf",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -1232,7 +1232,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"erw",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -1295,7 +1295,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"hg",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -1358,7 +1358,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"mk",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -1420,7 +1420,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"xc",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -1483,7 +1483,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"das",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",
@@ -1546,7 +1546,7 @@ export const data = [
 
 
         // pg Deatils
-        "area":"Gt",
+        "area":"gfd",
         "Food_available":"Veg",
         "ac_room":"available",
         "parking":"available",

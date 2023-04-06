@@ -15,8 +15,12 @@ const Home = () => {
 
 
     const cleartext = (e) => {
-        console.log("working");
+        // console.log("working");
         settext('');
+    }
+
+    const test = ()=>{
+        console.log(localStorage.getItem('token'));
     }
 
     return (
@@ -33,7 +37,7 @@ const Home = () => {
                 <div className='d-flex serachsection container'>
                     <input type="text" placeholder='Enter city name, area etc..' className='searchtext' name="search" value={text} onChange={(e) => onchange(e.target.value)} autoComplete='off'/>
                     <i className="fa-solid fa-xmark  serachion" onClick={cleartext}></i>
-                    <button type="button" id="search" className="search-submit"><i className="fa-solid fa-location-dot px-2"></i> Near me</button>
+                    <button type="button" id="search" className="search-submit"><i className="fa-solid fa-location-dot px-2" onClick={test}></i> Near me</button>
                 </div>
             </div>
 
