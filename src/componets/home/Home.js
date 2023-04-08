@@ -1,28 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import './home.css'
 import './responsive.css'
 import { city_data } from '../../data/citydata'
-import { data } from '../../data/pgdata'
 import { Link } from "react-router-dom"
+import { data } from '../../data/pgdata'
 
 const Home = () => {
+
     const color = "#041073";
-    let search_data = data;
+    // console.log(search_data);
     let [text, settext] = useState('');
     const onchange = (text) => {
         settext(text);
     }
 
-
+      
     const cleartext = (e) => {
-        // console.log("working");
         settext('');
     }
 
-    const test = ()=>{
-        console.log(localStorage.getItem('token'));
-    }
-
+    
     return (
 
         <div>
@@ -37,7 +34,7 @@ const Home = () => {
                 <div className='d-flex serachsection container'>
                     <input type="text" placeholder='Enter city name, area etc..' className='searchtext' name="search" value={text} onChange={(e) => onchange(e.target.value)} autoComplete='off'/>
                     <i className="fa-solid fa-xmark  serachion" onClick={cleartext}></i>
-                    <button type="button" id="search" className="search-submit"><i className="fa-solid fa-location-dot px-2" onClick={test}></i> Near me</button>
+                    <button type="button" id="search" className="search-submit"><i className="fa-solid fa-location-dot px-2"></i> Near me</button>
                 </div>
             </div>
 
@@ -47,7 +44,7 @@ const Home = () => {
                     text &&
                     <ul className='search_result list-group'>
                         {
-                            search_data.filter(search => search.Address.toLowerCase().includes(text.toLowerCase())).map(search => (
+                            data.filter(search => search.Address.toLowerCase().includes(text.toLowerCase())).map(search => (
                                 <Link to={`pgdetails/${search.id}`} style={{textDecoration:'none'}}>
                                     <li className='list_item list-group-item '>
                                         <i className="fa-sharp fa-solid fa-location-dot fa-beat-fade location_icon" style={{ color: "#ee1b65" }}>

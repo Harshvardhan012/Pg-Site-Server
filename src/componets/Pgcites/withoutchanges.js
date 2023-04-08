@@ -1,18 +1,64 @@
-import React, {  useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import { data } from '../../data/pgdata'
 import './pgcites.css'
 
 
-const Pgcites = (props) => {
 
+const Pgcites = () => {
     let { city } = useParams();
-    let da = props.data;
-    const [search_data, setsearch_data] = useState(da);
-    const [citydata, setcitydata] = useState(da);
-
+    const [citydata, setcitydata] = useState(data);
     const [sort, setsort] = useState(false);
     const [genderfilter, setgenderfilter] = useState('all');
     let pin = document.getElementById('pin');
+    
+    
+    
+    //  changes
+    const host = "http://localhost:5000";
+    const initialnotes = []
+    const [notes, setnotes] = useState(initialnotes);
+    // const [citydata, setcitydata] = useState(data);
+    // console.log(notes);
+    // let data = notes;
+  
+  
+      const GetNotes = async () => {
+  
+          // Api call
+          const response = await fetch(`${host}/api/details/fetchallnotes`, {
+              method: "GET",
+              headers: {
+                  "Content-Type": "application/json",
+                  "token": localStorage.getItem('token')
+              }
+          });
+          const json = await response.json();
+          setnotes(json);
+        //   console.log(json);
+      }
+  
+      useEffect(() => {
+          GetNotes();
+          setcitydata(notes);
+      }, [])
+  
+      //  changes
+  
+
+
+
+
+
+
+
+
+
+
+
+    // silde
+
+
 
     const clearfilter = () => {
         const btn = [];
@@ -27,24 +73,21 @@ const Pgcites = (props) => {
         for (var i = 0; i < 7; i++) {
             btn[i].checked = false;
         }
-        var newdata = da.filter(function (a) {
+        var newdata = data.filter(function (a) {
             return a.city.toLowerCase() === `${city.toLowerCase()}`;
         });
+
         pin.value = "";
         setcitydata(newdata);
     }
 
     useEffect(() => {
-        setsearch_data(da);
-        var newdata = search_data.filter(function (a) {
+        var newdata = citydata.filter(function (a) {
             return a.city.toLowerCase() === `${city.toLowerCase()}`;
         })
         setcitydata(newdata);
         // eslint-disable-next-line
-    }, [props.data]);
-
-    
-
+    }, []);
 
     let navi = useNavigate();
 
@@ -76,7 +119,7 @@ const Pgcites = (props) => {
     const malefilter = () => {
         var pincode = pin.value.toString();
 
-        var newdata = search_data.filter(function (a) {
+        var newdata = data.filter(function (a) {
             return a.Gender.toLowerCase() === 'male' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.pincode.match(pincode);
         })
         setgenderfilter("male");
@@ -86,7 +129,7 @@ const Pgcites = (props) => {
 
     const femalefilter = () => {
         var pincode = pin.value.toString();
-        var newdata = search_data.filter(function (a) {
+        var newdata = data.filter(function (a) {
             return a.Gender.toLowerCase() === 'female' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.pincode.match(pincode);
         })
         setgenderfilter("female");
@@ -96,7 +139,7 @@ const Pgcites = (props) => {
 
     const unisexfilter = () => {
         var pincode = pin.value.toString();
-        var newdata = search_data.filter(function (a) {
+        var newdata = data.filter(function (a) {
             return a.Gender.toLowerCase() === 'unisex' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.pincode.match(pincode);
         })
         setgenderfilter("unisex");
@@ -108,23 +151,23 @@ const Pgcites = (props) => {
         var pincode = pin.value.toString();
         var newdata;
         if (genderfilter === 'male') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'male' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price < 5000 && a.pincode.match(pincode)
             });
         }
         else if (genderfilter === 'female') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'female' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price < 5000 && a.pincode.match(pincode)
             });
         }
 
         else if (genderfilter === 'unisex') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'unisex' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price < 5000 && a.pincode.match(pincode)
             });
         }
         else if (genderfilter === 'all') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price < 5000 && a.pincode.match(pincode)
             });
         }
@@ -135,23 +178,23 @@ const Pgcites = (props) => {
         var pincode = pin.value.toString();
         var newdata;
         if (genderfilter === 'male') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'male' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 5000 && a.Price < 7500 && a.pincode.match(pincode)
             });
         }
         else if (genderfilter === 'female') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'female' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 5000 && a.Price < 7500 && a.pincode.match(pincode)
             });
         }
 
         else if (genderfilter === 'unisex') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'unisex' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 5000 && a.Price < 7500 && a.pincode.match(pincode)
             });
         }
         else if (genderfilter === 'all') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 5000 && a.Price < 7500 && a.pincode.match(pincode)
             });
         }
@@ -162,23 +205,23 @@ const Pgcites = (props) => {
         var pincode = pin.value.toString();
         var newdata;
         if (genderfilter === 'male') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'male' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 7500 && a.Price < 10000 && a.pincode.match(pincode)
             });
         }
         else if (genderfilter === 'female') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'female' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 7500 && a.Price < 10000 && a.pincode.match(pincode)
             });
         }
 
         else if (genderfilter === 'unisex') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'unisex' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 7500 && a.Price < 10000 && a.pincode.match(pincode)
             });
         }
         else if (genderfilter === 'all') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 7500 && a.Price < 10000 && a.pincode.match(pincode)
             });
         }
@@ -189,23 +232,23 @@ const Pgcites = (props) => {
         var pincode = pin.value.toString();
         var newdata;
         if (genderfilter === 'male') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'male' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 10000 && a.pincode.match(pincode)
             });
         }
         else if (genderfilter === 'female') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'female' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 10000 && a.pincode.match(pincode)
             });
         }
 
         else if (genderfilter === 'unisex') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.Gender.toLowerCase() === 'unisex' && a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 10000 && a.pincode.match(pincode)
             });
         }
         else if (genderfilter === 'all') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.city.toLowerCase() === `${city.toLowerCase()}` && a.Price >= 10000 && a.pincode.match(pincode)
             });
         }
@@ -215,14 +258,14 @@ const Pgcites = (props) => {
     const search_by_pin = () => {
         var pincode = pin.value.toString();
         var newdata;
-        // console.log(genderfilter);
+        console.log(genderfilter);
         if (pincode.length > 0 && genderfilter === 'all') {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.pincode.match(pincode) && a.city.toLowerCase() === `${city.toLowerCase()}`
             })
         }
         else {
-            newdata = search_data.filter(function (a) {
+            newdata = data.filter(function (a) {
                 return a.pincode.match(pincode) && a.Gender.toLowerCase() === genderfilter;
             })
         }

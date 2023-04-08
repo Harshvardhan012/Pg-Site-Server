@@ -14,8 +14,8 @@ const Header = () => {
 
 
   return (
-    <nav className="navbar navbar-expand-lg  bg-light newbar" style={{ zIndex: 999 ,position:'sticky'}} data-bs-theme="light">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-lg  bg-light newbar sticky" style={{ zIndex: 999 ,position:'sticky'}} data-bs-theme="light">
+      <div className="container-fluid ">
         <Link className="navbar-brand logotext" to="/"><img src={logo} alt="Logo Loading" className='logo' /><b style={{ color: color }} >Find My PG</b></Link>
 
 
@@ -25,7 +25,7 @@ const Header = () => {
 
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
             <li className="nav-item">
               <Link className="nav-link" to="/">Home</Link>
             </li>

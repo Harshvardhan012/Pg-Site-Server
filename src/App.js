@@ -8,12 +8,20 @@ import Pgcites from './componets/Pgcites/Pgcites';
 import Details from './componets/Deatils/Details';
 import Login from './componets/Login/Login';
 import SignUp from './componets/SignUp/Signup';
-import Fun from './componets/GetNotes';
-
-
+import { useContext, useEffect} from 'react';
+import datacontext from './Context/Data/datacontext';
 
 
 function App() {
+  const Context = useContext(datacontext);
+  const { dbdata, getNote } = Context;
+
+  useEffect(() => {
+    getNote();
+    // eslint-disable-next-line
+  }, []);
+
+
   return (
     <Router>
       <Header />
@@ -22,9 +30,8 @@ function App() {
         <Route exact path="/about" element={<About />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/signup" element={<SignUp />} />
-        <Route exact path='/search/:city' element={<Pgcites />} />
-        <Route exact path='/pgdetails/:id' element={<Details />} />
-        <Route exact path='/getdata' element={<Fun />} />
+        <Route exact path='/search/:city' element={<Pgcites data={dbdata}/>} />
+        <Route exact path='/pgdetails/:id' element={<Details data={dbdata}/>} />
       </Routes>
     </Router>
   );
