@@ -1,18 +1,27 @@
-import React, { useState} from 'react'
+import React, { useEffect, useState} from 'react'
 import './home.css'
 import './responsive.css'
 import { city_data } from '../../data/citydata'
 import { Link } from "react-router-dom"
-import { data } from '../../data/pgdata'
 
-const Home = () => {
+
+const Home = (props) => {
 
     const color = "#041073";
-    // console.log(search_data);
     let [text, settext] = useState('');
     const onchange = (text) => {
         settext(text);
     }
+
+    let da = props.data;
+    const [details, setdetails] = useState(da);
+
+    
+    useEffect(() => {
+        setdetails(da);
+        // eslint-disable-next-line
+    }, [da]);
+
 
       
     const cleartext = (e) => {
@@ -44,8 +53,8 @@ const Home = () => {
                     text &&
                     <ul className='search_result list-group'>
                         {
-                            data.filter(search => search.Address.toLowerCase().includes(text.toLowerCase())).map(search => (
-                                <Link to={`pgdetails/${search.id}`} style={{textDecoration:'none'}}>
+                            details.filter(search => search.Address.toLowerCase().includes(text.toLowerCase())).map((search,k) => (
+                                <Link to={`pgdetails/${search.id}`} style={{textDecoration:'none'}} key={k}>
                                     <li className='list_item list-group-item '>
                                         <i className="fa-sharp fa-solid fa-location-dot fa-beat-fade location_icon" style={{ color: "#ee1b65" }}>
                                         </i>

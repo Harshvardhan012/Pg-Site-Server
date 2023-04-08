@@ -1,4 +1,9 @@
 export const city_data = [
+    
+    {
+        "img": "https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg",
+        "name": "Jaipur"
+    },
     {
         "img": "https://bookmypg.co.in/assets/front/images/bangaluru.jpg",
         "name": "Bengaluru"
@@ -30,10 +35,6 @@ export const city_data = [
     {
         "img": "https://bookmypg.co.in/assets/front/images/chennai.jpg",
         "name": "Indore"
-    },
-    {
-        "img": "https://bookmypg.co.in/assets/front/images/pune.jpg",
-        "name": "Jaipur"
     }
 ]
 

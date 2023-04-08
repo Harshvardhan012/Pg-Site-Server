@@ -25,10 +25,11 @@ const Login = () => {
         const json = await response.json();
         if (json.success) {
             // save the token and redirect 
-            console.log("Success");
             localStorage.setItem('token', json.token);
-
-            toast.success('Login Successfully', {
+            
+            // this is used to Navigate to home page
+            Navigate('/');   
+            toast.success(`Login Successfully`, {
                 position: "top-center",
                 autoClose: 1200,
                 hideProgressBar: false,
@@ -38,11 +39,6 @@ const Login = () => {
                 progress: undefined,
                 theme: "dark",
                 });
-
-            // this is used to Navigate to home page
-            Navigate('/');
-           
-            
         }
         else {
             // To show Alert 
