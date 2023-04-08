@@ -5,18 +5,17 @@ import logo from '../../img/logo.png'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
-
 const Header = () => {
 
   const color = "#041073";
-
+  const dismissAll = () =>  toast.dismiss();
+  
   let Navigator = useNavigate();
 
   const handlelogout = (e) => {
     e.preventDefault();
     localStorage.removeItem('token');
+    toast.dismiss();
     Navigator('/');
     toast.success(`Logout Successfully`, {
       position: "top-center",
@@ -29,10 +28,11 @@ const Header = () => {
       theme: "dark",
     });
   }
-  const ref = useRef()
-  const ref2 = useRef()
-  const refclose = useRef()
-  const refclose2 = useRef()
+
+  const ref = useRef();
+  const ref2 = useRef();
+  const refclose = useRef();
+  const refclose2 = useRef();
 
   const login = (e) => {
     e.preventDefault();
@@ -64,7 +64,9 @@ const Header = () => {
 
       // this is used to Navigate to home page
       refclose.current.click();
+      toast.dismiss();
       Navigate('/');
+
       toast.success(`Login Successfully`, {
         position: "top-center",
         autoClose: 1200,
@@ -79,6 +81,7 @@ const Header = () => {
     }
     else {
       // To show Alert 
+      toast.dismiss();
       toast.error(`${json.error}`, {
         position: "top-center",
         autoClose: 1200,
@@ -118,6 +121,7 @@ const Header = () => {
         // save the token and redirect 
         localStorage.setItem('token', json.token);
 
+        toast.dismiss();
         // To show Alert 
         toast.success('Account Created Successfully ', {
           position: "top-center",
@@ -139,6 +143,7 @@ const Header = () => {
       else {
         // To show Alert 
         if (json.error) {
+          toast.dismiss();
           toast.error(`${json.error}`, {
             position: "top-center",
             autoClose: 1200,
@@ -151,6 +156,7 @@ const Header = () => {
           });
         }
         else {
+          toast.dismiss();
           toast.error('Enter a Vaild Email', {
             position: "top-center",
             autoClose: 1200,
@@ -165,6 +171,7 @@ const Header = () => {
       }
     }
     catch (error) {
+      toast.dismiss();
       toast.error(' Invalid Details', {
         position: "top-center",
         autoClose: 1200,
@@ -186,7 +193,18 @@ const Header = () => {
 
   return (
     <>
-
+   <ToastContainer
+                  position="top-centre"
+                  autoClose={1000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                  theme="dark"
+                />
       {/*  This is Login Modal */}
       <button type="button" ref={ref} className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Launch modal
@@ -196,7 +214,7 @@ const Header = () => {
         <div className="modal-dialog" >
           <div className="modal-content col">
             <div className="modal-header">
-              <ToastContainer
+              {/* <ToastContainer
                 position="top-center"
                 autoClose={1000}
                 hideProgressBar={false}
@@ -207,7 +225,7 @@ const Header = () => {
                 draggable
                 pauseOnHover
                 theme="dark"
-              />
+              /> */}
               <h1 className="modal-title fs-5" id="staticBackdropLabel" style={{ color: 'blue' }}>Login To Continue Find My Pg </h1>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
@@ -246,7 +264,7 @@ const Header = () => {
           <div className="modal-dialog" >
             <div className="modal-content col">
               <div className="modal-header">
-                <ToastContainer
+                {/* <ToastContainer
                   position="top-center"
                   autoClose={1000}
                   hideProgressBar={false}
@@ -257,7 +275,7 @@ const Header = () => {
                   draggable
                   pauseOnHover
                   theme="dark"
-                />
+                /> */}
                 <h1 className="modal-title fs-5" id="staticBackdropLabel" style={{ color: 'blue' }}>Create Account For Find My Pg </h1>
                 <button type="button" ref={refclose2} className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
@@ -265,7 +283,7 @@ const Header = () => {
 
               <div className="modal-body">
                 <div className='container mx-10 my-5'>
-                  <ToastContainer
+                  {/* <ToastContainer
                     position="top-center"
                     autoClose={2000}
                     hideProgressBar={false}
@@ -276,7 +294,7 @@ const Header = () => {
                     draggable
                     pauseOnHover
                     theme="dark"
-                  />
+                  /> */}
                   <form onSubmit={sonhandler} >
                     <div className="mb-3">
                       <label htmlFor="name" className="form-label">Enter Your Name</label>
@@ -311,7 +329,7 @@ const Header = () => {
       {/* Navbar  */}
       <nav className="navbar navbar-expand-lg  bg-dark newbar sticky " style={{ zIndex: 999, position: 'sticky' }} data-bs-theme="light">
         <div className="container-fluid nav_color">
-          <ToastContainer
+          {/* <ToastContainer
             position="top-center"
             autoClose={2000}
             hideProgressBar={false}
@@ -322,7 +340,7 @@ const Header = () => {
             draggable
             pauseOnHover
             theme="dark"
-          />
+          /> */}
           <Link className="navbar-brand logotext " to="/"><img src={logo} alt="Logo Loading" className='logo' /><b style={{ color: color }} >Find My PG</b></Link>
 
 
@@ -363,7 +381,9 @@ const Header = () => {
       </nav>
     </>
   )
+  
 }
+
 
 export default Header;
 

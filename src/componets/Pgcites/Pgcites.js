@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import './pgcites.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Pgcites = (props) => {
@@ -37,7 +39,17 @@ const Pgcites = (props) => {
 
     useEffect(() => {
         if (!localStorage.getItem('token')) {
-            Navigator('/login');
+            Navigator('/');
+            toast.warning(`Please Login To Continue`, {
+                position: "top-left",
+                autoClose: 1200,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
         }
         else {
             setsearch_data(da);
@@ -240,6 +252,18 @@ const Pgcites = (props) => {
     return (
         <>
             <div className='d-flex'>
+            <ToastContainer
+                position="top-center"
+                autoClose={1000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+              />
 
                 <div className='filter heading'>
                     {/* Filter */}
