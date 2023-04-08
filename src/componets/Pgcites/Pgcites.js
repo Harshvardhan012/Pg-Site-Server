@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import './pgcites.css'
 
@@ -9,6 +9,7 @@ const Pgcites = (props) => {
     let da = props.data;
     const [search_data, setsearch_data] = useState(da);
     const [citydata, setcitydata] = useState(da);
+    const Navigator = useNavigate();
 
     const [sort, setsort] = useState(false);
     const [genderfilter, setgenderfilter] = useState('all');
@@ -35,15 +36,20 @@ const Pgcites = (props) => {
     }
 
     useEffect(() => {
-        setsearch_data(da);
-        var newdata = search_data.filter(function (a) {
-            return a.city.toLowerCase() === `${city.toLowerCase()}`;
-        })
-        setcitydata(newdata);
+        if (!localStorage.getItem('token')) {
+            Navigator('/login');
+        }
+        else {
+            setsearch_data(da);
+            var newdata = search_data.filter(function (a) {
+                return a.city.toLowerCase() === `${city.toLowerCase()}`;
+            })
+            setcitydata(newdata);
+        }
         // eslint-disable-next-line
     }, [props.data]);
 
-    
+
 
 
     let navi = useNavigate();
