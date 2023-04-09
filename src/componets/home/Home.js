@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 
 
 const Home = (props) => {
+    window.scrollTo(0, 0);
 
     const color = "#041073";
     let [text, settext] = useState('');

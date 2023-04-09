@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom'
 import './details.css'
 
 const Details = (props) => {
+    window.scrollTo(0, 0);
+
 
     let { id } = useParams();
     let val = id;

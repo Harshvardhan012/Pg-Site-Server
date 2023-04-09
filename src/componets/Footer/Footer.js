@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <>
 
-            <footer className="bg-light text-center text-black border footer" style={{marginTop:100 }}>
+            <footer className="bg-light text-center text-black border footer" style={{marginTop:0 }}>
                 <div className="container p-4 pb-0 ">
                     <h3 className='my-4' style={{color:'#041073'}}>Find My PG </h3>
                     <section className="mb-2">
@@ -87,7 +87,7 @@ const Footer = () => {
 
                     <section class="mb-4">
                         <p>
-                        Find Your PG, is fastest-growing network of managed Paying Guest (PG) rentals. We hope to provide you with the best renting solutions with the help of our Designs and Technology.
+                        Find My PG is India's Largest growing "PG Rental Network" attempting to provide better Paying Guest Accommodation Via our technology platform. We help find the best PG rental across Major Indian Cities..
                         </p>
                     </section>
                 </div>

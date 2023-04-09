@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import './pgcites.css'
-import { ToastContainer, toast } from 'react-toastify';
+import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -16,9 +16,10 @@ const Pgcites = (props) => {
     const [sort, setsort] = useState(false);
     const [genderfilter, setgenderfilter] = useState('all');
     let pin = document.getElementById('pin');
-
+    
     const clearfilter = () => {
         const btn = [];
+       
         btn[0] = document.getElementById('flexRadioDisabled1');
         btn[1] = document.getElementById('flexRadioDisabled2');
         btn[2] = document.getElementById('flexRadioDisabled3');
@@ -36,13 +37,12 @@ const Pgcites = (props) => {
         pin.value = "";
         setcitydata(newdata);
     }
-
     useEffect(() => {
         if (!localStorage.getItem('token')) {
             Navigator('/');
-            toast.warning(`Please Login To Continue`, {
-                position: "top-left",
-                autoClose: 1200,
+                toast.warning(`Please Login To Continue`, {
+                position: "top-right",
+                autoClose: 900,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -252,19 +252,7 @@ const Pgcites = (props) => {
     return (
         <>
             <div className='d-flex'>
-            <ToastContainer
-                position="top-center"
-                autoClose={1000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="dark"
-              />
-
+         
                 <div className='filter heading'>
                     {/* Filter */}
                     <div className='heading d-flex'>
@@ -277,25 +265,25 @@ const Pgcites = (props) => {
 
                     {/* Gender Filter */}
                     <div className='filter1'>
-                        <h3 style={{ color: '#041073', fontSize: 20 }} className='my-3'>Gender</h3>
+                        <h3 style={{ color: '#041073', fontSize: 20 }} className='my-2 ' >Gender</h3>
 
-                        <div className="form-check">
-                            <input className="form-check-input " type="radio" name="flexRadioDisabled" id="flexRadioDisabled1" onClick={malefilter} />
-                            <label className="form-check-label" htmlFor="flexRadioDisabled" style={{ color: '#041073', fontSize: 18 }}>
+                        <div className="form-check ">
+                            <input className="form-check-input check_box" type="radio" name="flexRadioDisabled" id="flexRadioDisabled1" onClick={malefilter} />
+                            <label className="form-check-label mx-2" htmlFor="flexRadioDisabled" style={{ color: '#041073', fontSize: 18 }}>
                                 Male
                             </label>
                         </div>
 
-                        <div className="form-check">
-                            <input className="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled2" onClick={femalefilter} />
-                            <label className="form-check-label" htmlFor="flexRadioDisabled2" style={{ color: '#041073', fontSize: 18 }}>
+                        <div className="form-check ">
+                            <input className="form-check-input check_box" type="radio" name="flexRadioDisabled" id="flexRadioDisabled2" onClick={femalefilter} />
+                            <label className="form-check-label mx-2" htmlFor="flexRadioDisabled2" style={{ color: '#041073', fontSize: 18 }}>
                                 Female
                             </label>
                         </div>
 
-                        <div className="form-check">
-                            <input className="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled3" onClick={unisexfilter} />
-                            <label className="form-check-label" htmlFor="flexRadioDisabled3" style={{ color: '#041073', fontSize: 18 }}>
+                        <div className="form-check ">
+                            <input className="form-check-input check_box" type="radio" name="flexRadioDisabled" id="flexRadioDisabled3" onClick={unisexfilter} />
+                            <label className="form-check-label mx-2" htmlFor="flexRadioDisabled3" style={{ color: '#041073', fontSize: 18 }}>
                                 Unisex
                             </label>
                         </div>
@@ -306,32 +294,32 @@ const Pgcites = (props) => {
 
                     {/* Rent Filter */}
                     <div className='filter1'>
-                        <h3 style={{ color: '#041073', fontSize: 20 }} className='my-3'>Monthly rent</h3>
+                        <h3 style={{ color: '#041073', fontSize: 20 }} className='my-3 '>Monthly rent</h3>
 
-                        <div className="form-check my-2">
-                            <input className="form-check-input" type="radio" name="flexRadio" id="flexRadio1" onClick={under5000filter} />
-                            <label className="form-check-label" htmlFor="flexRadio1" style={{ color: '#041073', fontSize: 18 }}>
+                        <div className="form-check my-2 ">
+                            <input className="form-check-input check_box" type="radio" name="flexRadio" id="flexRadio1" onClick={under5000filter} />
+                            <label className="form-check-label mx-2" htmlFor="flexRadio1" style={{ color: '#041073', fontSize: 18 }}>
                                 &lt;  5000
                             </label>
                         </div>
 
-                        <div className="form-check my-2">
-                            <input className="form-check-input" type="radio" name="flexRadio" id="flexRadio2" onClick={val5000to7500filter} />
-                            <label className="form-check-label" htmlFor="flexRadio2" style={{ color: '#041073', fontSize: 18 }}>
+                        <div className="form-check my-2 ">
+                            <input className="form-check-input check_box" type="radio" name="flexRadio" id="flexRadio2" onClick={val5000to7500filter} />
+                            <label className="form-check-label mx-2" htmlFor="flexRadio2" style={{ color: '#041073', fontSize: 18 }}>
                                 5,000 - 7,500
                             </label>
                         </div>
 
-                        <div className="form-check my-2">
-                            <input className="form-check-input" type="radio" name="flexRadio" id="flexRadio3" onClick={val7500to10000filter} />
-                            <label className="form-check-label" htmlFor="flexRadio3" style={{ color: '#041073', fontSize: 18 }}>
+                        <div className="form-check my-2 ">
+                            <input className="form-check-input check_box" type="radio" name="flexRadio" id="flexRadio3" onClick={val7500to10000filter} />
+                            <label className="form-check-label mx-2" htmlFor="flexRadio3" style={{ color: '#041073', fontSize: 18 }}>
                                 7,500 - 10,000
                             </label>
                         </div>
 
-                        <div className="form-check my-2">
-                            <input className="form-check-input" type="radio" name="flexRadio" id="flexRadio4" onClick={morethan10000filter} />
-                            <label className="form-check-label" htmlFor="flexRadio4" style={{ color: '#041073', fontSize: 18 }}>
+                        <div className="form-check my-2 ">
+                            <input className="form-check-input check_box" type="radio" name="flexRadio" id="flexRadio4" onClick={morethan10000filter} />
+                            <label className="form-check-label mx-2" htmlFor="flexRadio4" style={{ color: '#041073', fontSize: 18 }}>
                                 &gt; 10,000
                             </label>
                         </div>
@@ -342,7 +330,7 @@ const Pgcites = (props) => {
                     {/* Todo*/}
 
                     <div className='filter1'>
-                        <label htmlFor="number" style={{ color: '#041073', fontSize: 16 }}><b>Search by Pincode</b></label>
+                        <label htmlFor="number" style={{ color: '#041073', fontSize: 16 }}className='pincode'><b>Search by Pincode</b></label>
                         <div className='pin_div'>
                             <input name="pincode" id='pin' type="number" inputMode="numeric" maxLength="4" autoComplete='false' className='pin_enter' placeholder='Enter Pincode' /><i className="fa-solid fa-magnifying-glass pin_search" onClick={search_by_pin}></i>
                         </div>

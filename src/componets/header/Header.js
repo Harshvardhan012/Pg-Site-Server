@@ -6,9 +6,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Header = () => {
+  window.scrollTo(0, 0);
 
   const color = "#041073";
-  const dismissAll = () =>  toast.dismiss();
   
   let Navigator = useNavigate();
 
@@ -210,7 +210,7 @@ const Header = () => {
         Launch modal
       </button>
 
-      <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div className="modal-dialog" >
           <div className="modal-content col">
             <div className="modal-header">
@@ -236,16 +236,16 @@ const Header = () => {
                 <form onSubmit={clickhandler}>
                   <div className="mb-3">
                     <label htmlFor="email" className="form-label"> Email address</label>
-                    <input type="email" className="form-control" id="email" value={details.email} onChange={changehandler} name="email" aria-describedby="emailHelp" />
+                    <input type="email" className="form-control" id="email2" value={details.email} onChange={changehandler} name="email" aria-describedby="emailHelp" />
                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                   </div>
                   <div className="mb-3">
                     <label htmlFor="password" className="form-label" >Password</label>
-                    <input type="password" className="form-control" value={details.password} onChange={changehandler} id="password" name="password" />
+                    <input type="password" className="form-control" value={details.password} onChange={changehandler} id="password2" name="password" />
                   </div>
                   <div className="modal-footer">
                     <button type="button" ref={refclose} className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button ttype="submit" className="btn btn-primary">Login</button>
+                    <button type="submit" className="btn btn-primary">Login</button>
                   </div>
                 </form>
               </div>
@@ -355,7 +355,7 @@ const Header = () => {
                 <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/">Blog </Link>
+                <Link className="nav-link" to="/blog">Blog </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/">Contact Us</Link>
