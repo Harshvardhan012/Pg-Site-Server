@@ -1,5 +1,6 @@
 import React from 'react'
-import './blog1.css';
+import './blogs_content.css';
+import './blogs_content_responsive.css';
 import { useParams} from 'react-router-dom'
 import { blog_data } from '../../data/blogdata';
 
@@ -19,10 +20,10 @@ const Blog1 = () => {
                 </div>
 
                 <div className='blog1_title '>
-                    <h2>{blog_data[no].bolg_title}</h2>
+                    <h2 className='heading_blog_content'>{blog_data[no].bolg_title}</h2>
                    
                 </div>
-                <p>
+                <p className='blog_content_para'>
                     {blog_data[no].blog_desc.para1}
                     <br />
                     <br />
