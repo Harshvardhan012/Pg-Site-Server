@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import './contact_us.css'
+import './contact.css'
+import './contact_responsive.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const Contact_us = () => {
+const Contact = () => {
 
     const [details, setdeatils] = useState({ email: "", number: "", name: "", city: "", message: "", enquiry: "" });
 
@@ -83,7 +84,7 @@ const Contact_us = () => {
             <div className='container d-flex mb-5 my-5 shadow_contact pt-3'>
 
                 <div className='left_part_contact mt-5'>
-                    <div className=' d-flex mb-5 '>
+                    <div className=' d-flex mb-5 div_fix_details'>
                         <div>
                             <i class="fa-sharp fa-solid fa-location-dot fa-2xl my-4 mx-3"></i>
                         </div >
@@ -93,7 +94,7 @@ const Contact_us = () => {
                         </div>
                     </div>
 
-                    <div className='d-flex mb-5'>
+                    <div className='d-flex mb-5 div_fix_details'>
                         <div >
                             <i class="fa-solid fa-phone fa-2xl my-4 mx-2"></i>
                         </div >
@@ -108,7 +109,7 @@ const Contact_us = () => {
                         <div >
                             <i class="fa-sharp fa-solid fa-envelope  fa-2xl my-4 mx-1"></i>
                         </div >
-                        <div className=' d-flex' style={{ flexDirection: 'column' }}>
+                        <div className=' d-flex div_fix_details' style={{ flexDirection: 'column' }}>
                             <span style={{ color: 'rgb(4, 16, 215)' }} className='mx-2'><strong>EMAIL</strong></span>
                             <span className='mx-2'><b>info@findmypg.co.in</b></span>
                         </div>
@@ -122,7 +123,7 @@ const Contact_us = () => {
 
                     <div className='container'>
                         <form on onSubmit={sumbit_from}>
-                            <div className="mb-3 d-flex">
+                            <div className="mb-3  div_details">
 
                                 <div className="mb-3">
                                     <label htmlFor="name" className="form-label label_contact" ><b>Name</b></label>
@@ -134,7 +135,7 @@ const Contact_us = () => {
                                     <input type="email" className="form-control second_text_contact bor_contact" id="email2" value={details.email} onChange={changehandler} name="email" aria-describedby="emailHelp" required/>
                                 </div>
                             </div>
-                            <div className="mb-3 d-flex">
+                            <div className="mb-3 div_details">
 
                                 <div className="mb-3">
                                     <label htmlFor="MobileNo" className="form-label label_contact" ><b> Mobile </b></label>
@@ -151,7 +152,7 @@ const Contact_us = () => {
                                 <label htmlFor="city" className="form-label label_contact" ><b>Enquiry Type</b></label>
                             </div>
 
-                            <select id="select" className='mb-3'>
+                            <select id="select" className='mb-3 dropbox_contact'>
                                 <option value="Pg Booking">Pg Booking</option>
                                 <option value="Customer Service">Customer Service</option>
                                 <option value="Customer Service">Complaint</option>
@@ -178,4 +179,4 @@ const Contact_us = () => {
     )
 }
 
-export default Contact_us
+export default Contact

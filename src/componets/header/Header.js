@@ -236,12 +236,12 @@ const Header = () => {
                 <form onSubmit={clickhandler}>
                   <div className="mb-3">
                     <label htmlFor="email" className="form-label"> Email address</label>
-                    <input type="email" className="form-control" id="email2" value={details.email} onChange={changehandler} name="email" aria-describedby="emailHelp" />
+                    <input type="email" className="form-control" id="email2" value={details.email} onChange={changehandler} name="email" aria-describedby="emailHelp" required/>
                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                   </div>
                   <div className="mb-3">
                     <label htmlFor="password" className="form-label" >Password</label>
-                    <input type="password" className="form-control" value={details.password} onChange={changehandler} id="password2" name="password" />
+                    <input type="password" className="form-control" value={details.password} onChange={changehandler} id="password2" name="password" required />
                   </div>
                   <div className="modal-footer">
                     <button type="button" ref={refclose} className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -358,13 +358,13 @@ const Header = () => {
                 <Link className="nav-link" to="/blog">Blog </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact_us">Contact Us</Link>
+                <Link className="nav-link" to="/contact">Contact Us</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/about">About Us</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/">For PG Owners</Link>
+                <Link className="nav-link" to="/PGowners">For PG Owners</Link>
               </li>
 
             </ul>

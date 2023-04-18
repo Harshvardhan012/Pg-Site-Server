@@ -11,7 +11,8 @@ import datacontext from './Context/Data/datacontext';
 import Footer from './componets/Footer/Footer';
 import Blog from './componets/Blog/Blog';
 import Blog1 from './componets/Blogs_content/Blogs_content';
-import Contact_us from './componets/Contact_us/Contact_us';
+import Contact from './componets/Contact/Contact';
+import Owners from './componets/Owners/Owners';
 
 
 
@@ -31,7 +32,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home data={dbdata} />} />
           <Route exact path="/about" element={<About />} />
-          <Route exact path="/contact_us" element={<Contact_us/>} />
+          <Route exact path="/contact" element={<Contact/>} />
+          <Route exact path="/PGowners" element={<Owners/>} />
           <Route exact path='/search/:city' element={<Pgcites data={dbdata} />} />
           <Route exact path='/pgdetails/:id' element={<Details data={dbdata} />} />
           <Route exact path='/:no' element={<Blog1 />} />
