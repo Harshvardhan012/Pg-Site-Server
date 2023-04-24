@@ -1,25 +1,19 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./add_pg.css";
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
-// available_for
-// Power
-
 const Add_Pg = () => {
   const [details, setdeatils] = useState({
-    id: "",
+    // id: "",
     pg_name: "",
     Address: "",
     city: "",
     desc: "",
-    area: "",
+    // area: "",
     pincode: "",
-    maintenance: "",
-    water_charges: "",
     deposit: "",
-    Notice_period: "",
-    Gate_timing: "",
     Price: "",
     no_of_beds: "",
     opertaing_since: "",
@@ -28,23 +22,27 @@ const Add_Pg = () => {
   const [drop, setdrop] = useState({
     Gender: "Unisex",
     Food_available: "Vegetarien",
-    ac_room: "Available",
-    parking: "Available",
+    // ac_room: "Available",
+    // parking: "Available",
     power_backup: "Available",
-    available_for: "Unisex",
+    available_for: "Boys",
     preferred_tenants: "Available",
+    maintenance: "Yes",
+    water_charges: "Yes",
     laundry: "Available",
     Visitor_Entry: "Allowed",
     Non_veg: "Allowed",
+    Notice_period: "None",
     opposite_gender: "Allowed",
     Smoking: "Allowed",
     Drinking: "Allowed",
     Loud_Music: "Allowed",
-    Party: "Allowed",
+    // Party: "Allowed",
     wifi: "Available",
     Power: "Available",
     Room_cleaning: "Available",
     Water_cooler: "Available",
+    Gate_timing: "None",
     Gym: "Available",
     Lift: "Available",
     Warden: "Available",
@@ -64,26 +62,26 @@ const Add_Pg = () => {
   const upload = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("id", details.id);
+    // formData.append("id", details.id);
     formData.append("pg_name", details.pg_name);
     formData.append("Address", details.Address);
     formData.append("city", details.city);
     formData.append("desc", details.desc);
-    formData.append("area", details.area);
+    formData.append("area", "Gt12");
     formData.append("pincode", details.pincode);
-    formData.append("maintenance", details.maintenance);
-    formData.append("water_charges", details.water_charges);
     formData.append("deposit", details.deposit);
-    formData.append("Notice_period", details.Notice_period);
-    formData.append("Gate_timing", details.Gate_timing);
     formData.append("Price", details.Price);
     formData.append("no_of_beds", details.no_of_beds);
     formData.append("opertaing_since", details.opertaing_since);
 
+    formData.append("maintenance", drop.maintenance);
+    formData.append("water_charges", drop.water_charges);
+    formData.append("Notice_period", drop.Notice_period);
+    formData.append("Gate_timing", drop.Gate_timing);
     formData.append("Gender", drop.Gender);
     formData.append("Food_available", drop.Food_available);
-    formData.append("ac_room", drop.ac_room);
-    formData.append("parking", drop.parking);
+    // formData.append("ac_room", drop.ac_room);
+    // formData.append("parking", drop.parking);
     formData.append("power_backup", drop.power_backup);
     formData.append("available_for", drop.available_for);
     formData.append("preferred_tenants", drop.preferred_tenants);
@@ -94,7 +92,7 @@ const Add_Pg = () => {
     formData.append("Smoking", drop.Smoking);
     formData.append("Drinking", drop.Drinking);
     formData.append("Loud_Music", drop.Loud_Music);
-    formData.append("Party", drop.Party);
+    // formData.append("Party", drop.Party);
     formData.append("wifi", drop.wifi);
     formData.append("Power", drop.Power);
     formData.append("Room_cleaning", drop.Room_cleaning);
@@ -108,7 +106,7 @@ const Add_Pg = () => {
       formData.append("image", file);
     }
 
-    await axios.post("http://localhost:5000/api/upload/image", formData);
+    await axios.post("http://localhost:5000/api/upload/addDetails",formData);
   };
 
   return (
@@ -120,7 +118,7 @@ const Add_Pg = () => {
       <div className="container">
         <form onSubmit={upload}>
           {/* Id */}
-          <div>
+          {/* <div>
             <label htmlFor="id" className="form-label mt-3 owner_details">
               <b>Enter Id</b>
             </label>
@@ -128,17 +126,17 @@ const Add_Pg = () => {
             <input
               type="number"
               className="form-control"
-              id="ownerid"
+              id="id"
               name="id"
               value={details.id}
               onChange={changehandler}
               required
             ></input>
-          </div>
+          </div> */}
 
           {/* Pg_name */}
 
-          {/* <div className="mb-3">
+          <div className="mb-3">
             <label htmlFor="pg_name" className="form-label mt-3 owner_details">
               <b>Enter PG Name</b>
             </label>
@@ -153,10 +151,10 @@ const Add_Pg = () => {
               onChange={changehandler}
               required
             />
-          </div> */}
+          </div>
 
           {/* Address */}
-          {/* <div className="mb-3">
+          <div className="mb-3">
             <label htmlFor="Address" className="form-label owner_details">
               <b>Enter Pg Address</b>
             </label>
@@ -169,10 +167,27 @@ const Add_Pg = () => {
               rows="2"
               required
             ></textarea>
-          </div> */}
+          </div>
+
+          {/* Price */}
+          <div>
+            <label htmlFor="Price" className="form-label mt-3 owner_details">
+              <b>PG Rent</b>
+            </label>
+
+            <input
+              type="number"
+              className="form-control"
+              id="ownerid"
+              name="Price"
+              value={details.Price}
+              onChange={changehandler}
+              required
+            ></input>
+          </div>
 
           {/* City */}
-          {/* <div className="mb-3">
+          <div className="mb-3">
             <label htmlFor="city" className="form-label mt-3 owner_details">
               <b>Enter PG City</b>
             </label>
@@ -186,23 +201,44 @@ const Add_Pg = () => {
               onChange={changehandler}
               required
             />
-          </div> */}
+          </div>
+
+          {/* Pincode */}
+          <div className="mb-3">
+            <label htmlFor="pincode" className="form-label owner_details">
+              <b>Enter Pincode</b>
+            </label>
+
+            <input
+              id="teladdhar"
+              name="pincode"
+              className="form-control contact_no"
+              type="tel"
+              size="6"
+              minLength="6"
+              maxLength="6"
+              value={details.pincode}
+              onChange={changehandler}
+              pattern="[0-9]{6}"
+              required
+            />
+          </div>
 
           {/* Description */}
-          {/* <div className="mb-3">
+          <div className="mb-3">
             <label htmlFor="desc" className="form-label owner_details">
               <b>Enter Pg Description</b>
             </label>
             <textarea
               className="form-control"
-              id="Textarea2"
+              id="desc"
               value={details.desc}
               onChange={changehandler}
               name="desc"
               rows="3"
               required
             ></textarea>
-          </div> */}
+          </div>
 
           {/* Area */}
           {/* <div className="mb-3">
@@ -220,84 +256,150 @@ const Add_Pg = () => {
             ></input>
           </div> */}
 
-          {/* Pincode */}
-
-          {/* <div className="mb-3">
-            <label htmlFor="pincode" className="form-label">
-              <b>Enter Pincode</b>
+          {/* No of Beds */}
+          <div className="mb-3">
+            <label htmlFor="no_of_beds" className="form-label owner_details">
+              <b>No of Bed Available</b>
             </label>
 
             <input
-              id="teladdhar"
-              name="pincode"
-              className="form-control contact_no"
-              type="tel"
+              id="no_of_beds"
+              name="no_of_beds"
+              className="form-control "
+              type="number"
               size="6"
-              minLength="6"
-              maxLength="6"
-              value={details.pincode}
+              min="1"
+              max="10000"
+              value={details.no_of_beds}
               onChange={changehandler}
-              pattern="[0-9]{6}"
               required
             />
-          </div> */}
+          </div>
+
+          {/* Deposite Amount */}
+          <div className="mb-3">
+            <label htmlFor="deposit" className="form-label owner_details">
+              <b>Deposite Amount</b>
+            </label>
+
+            <input
+              id="deposit"
+              name="deposit"
+              className="form-control "
+              type="number"
+              size="6"
+              min="1"
+              max="10000"
+              value={details.deposit}
+              onChange={changehandler}
+              required
+            />
+          </div>
+
+          {/* opertaing_since */}
+          <div className="mb-3">
+            <label
+              htmlFor="opertaing_since"
+              className="form-label owner_details"
+            >
+              <b>Opertaing Since (Year)</b>
+            </label>
+
+            <input
+              id="opertaing_since"
+              name="opertaing_since"
+              className="form-control "
+              type="number"
+              size="6"
+              min="1800"
+              max="2023"
+              placeholder="xxxx"
+              value={details.opertaing_since}
+              onChange={changehandler}
+              required
+            />
+          </div>
 
           {/* Uplode Images */}
-          <input
-            onChange={(e) => setImage(e.target.files)}
-            type="file"
-            multiple
-            required
-          ></input>
+          <div className="mb-2">
+            <label
+              htmlFor="opertaing_since"
+              className="form-label owner_details"
+            >
+              <b>Uplode Images (Minimum : 6)</b>
+            </label>
+            <input
+              onChange={(e) => setImage(e.target.files)}
+              type="file"
+              className="form-control "
+              multiple
+              required
+            />
+            <div id="imagehelp" className="form-text">
+              Please Uplode Minimum 6 Photos.
+            </div>
+          </div>
 
           {/* PG Rules */}
-          <div class="container text-center">
+          <div class="container text-center shadow">
             <h4 className="text-centre">PG Rules</h4>
             <div class="row align-items-start">
               <div class="col">
-                {/* Gender */}
+                {/* Gate timing */}
                 <div>
                   <div>
                     <label
-                      htmlFor="Gender"
+                      htmlFor="Gate_timing"
                       className="form-label label_contact"
                     >
-                      <b>Pg For Gender</b>
+                      <b>Gate Close Timing</b>
                     </label>
                   </div>
                   <select
-                    id="select1"
-                    name="Gender"
-                    className="mb-3 dropbox_contact"
-                    value={drop.Gender}
+                    id="Gate_timing"
+                    name="Gate_timing"
+                    className="mb-3 dropbox_contact px-2"
+                    value={drop.Gate_timing}
                     onChange={dropchange}
                   >
-                    <option value="Unisex">Unisex</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
+                    <option value="None">None</option>
+                    <option value="07:30 PM">07:30 PM</option>
+                    <option value="08:00 PM">08:00 PM</option>
+                    <option value="08:30 PM">08:30 PM</option>
+                    <option value="09:00 PM">09:00 PM</option>
+                    <option value="09:30 PM">09:30 PM</option>
+                    <option value="10:00 PM">10:00 PM</option>
+                    <option value="10:30 PM">10:30 PM</option>
+                    <option value="11:00 PM">11:00 PM</option>
                   </select>
                 </div>
               </div>
 
               <div class="col">
-                {/* party */}
-          <div>
-            <div>
-              <label htmlFor="Party" className="form-label label_contact">
-                <b>Party</b>
-              </label>
-            </div>
-            <select
-              id="select15"
-              name="Party"
-              value={drop.Party}
-              onChange={dropchange}
-              className="mb-3 dropbox_contact"
-            >
-              <option value="Allow">Allowed</option>
-              <option value="Not-Allow">Not-Allowed</option>
-            </select>
-          </div>
+                {/* Notice_period */}
+                <div>
+                  <div>
+                    <label
+                      htmlFor="Notice_period"
+                      className="form-label label_contact"
+                    >
+                      <b>Notice Period</b>
+                    </label>
+                  </div>
+                  <select
+                    id="select15"
+                    name="Notice_period"
+                    value={drop.Notice_period}
+                    onChange={dropchange}
+                    className="mb-3 dropbox_contact px-1"
+                  >
+                    <option value="None">None</option>
+                    <option value="1">1 Month</option>
+                    <option value="2">2 Month</option>
+                    <option value="3">3 Month</option>
+                    <option value="4">4 Month</option>
+                  </select>
+                </div>
               </div>
 
               <div class="col">
@@ -450,7 +552,7 @@ const Add_Pg = () => {
           </div>
 
           {/* Common Area and Amenities */}
-          <div class="container text-center my-5">
+          <div class="container text-center shadow">
             <h4 className="text-centre">Common Area and Amenities</h4>
             <div class="row align-items-start">
               <div class="col">
@@ -499,26 +601,28 @@ const Add_Pg = () => {
                 </div>
               </div>
 
-              <div class="col">
-                {/* Room Cleaning */}
+              <div className="col">
+                {/* Food_available */}
                 <div>
                   <div>
                     <label
-                      htmlFor="Room_cleaning"
+                      htmlFor="Food_available"
                       className="form-label label_contact"
                     >
-                      <b>Room Cleaning</b>
+                      <b>Food Available</b>
                     </label>
                   </div>
+
                   <select
-                    id="select18"
-                    name="Room_cleaning"
-                    value={drop.Room_cleaning}
-                    onChange={dropchange}
+                    id="select2"
+                    name="Food_available"
                     className="mb-3 dropbox_contact"
+                    onChange={dropchange}
+                    value={drop.Food_available}
                   >
-                    <option value="Available">Available</option>
-                    <option value="Not-Available">Not-Available</option>
+                    <option value="Vegetarien">Vegetarien</option>
+                    <option value="Non-Vegetarien">Non-Vegetarien</option>
+                    <option value="Both">Both</option>
                   </select>
                 </div>
               </div>
@@ -575,7 +679,7 @@ const Add_Pg = () => {
                 <div>
                   <div>
                     <label htmlFor="Lift" className="form-label label_contact">
-                      <b>Lift</b>
+                      <b>Elevator</b>
                     </label>
                   </div>
                   <select
@@ -614,249 +718,213 @@ const Add_Pg = () => {
                   </select>
                 </div>
               </div>
-            </div>
-          </div>
 
-          
-
-          {/* Todo available_for */}
-          <div>
-            {/* <div className="d-none">
-            <label htmlFor="power_backup" className="form-label label_contact">
-              <b>available_for </b>
-              </label>
-          </div>
-
-          <select
-          id="select6"
-            name="Gender"
-            className="mb-3 dropbox_contact d-none"
-            >
-            <option value="Available">unisex</option>
-            <option value="Not-Available">Male</option>
-            <option value="Not-Available">female</option>
-        </select> */}
-          </div>
-
-          {/* Preferred  Tenants */}
-          <div>
-            <div>
-              <label
-                htmlFor="preferred_tenants"
-                className="form-label label_contact"
-              >
-                <b>Preferred Tenants </b>
-              </label>
-            </div>
-
-            <select
-              id="select7"
-              name="preferred_tenants"
-              className="mb-3 dropbox_contact"
-              value={drop.preferred_tenants}
-              onChange={dropchange}
-            >
-              <option value="Students">Students</option>
-              <option value="Working individuals">Working individuals</option>
-              <option value="Family">Family</option>
-              <option value="All">All</option>
-            </select>
-          </div>
-
-          {/* Laundry */}
-          <div>
-            <div>
-              <label htmlFor="laundry" className="form-label label_contact">
-                <b>Laundry </b>
-              </label>
-            </div>
-
-            <select
-              id="select8"
-              name="laundry"
-              className="mb-3 dropbox_contact"
-              onChange={dropchange}
-              value={drop.laundry}
-            >
-              <option value="Available">Available</option>
-              <option value="Not-Available">Not-Available</option>
-            </select>
-          </div>
-
-          {/* Ac Room  */}
-          <div>
-            <div>
-              <label htmlFor="ac_room" className="form-label label_contact">
-                <b>Ac Room </b>
-              </label>
-            </div>
-
-            <select
-              id="select3"
-              name="ac_room"
-              className="mb-3 dropbox_contact"
-              onChange={dropchange}
-              value={details.ac_room}
-            >
-              <option value="Available">Available</option>
-              <option value="Not-Available">Not-Available</option>
-            </select>
-          </div>
-
-          {/* Parking */}
-          <div>
-            <div>
-              <label htmlFor="parking" className="form-label label_contact">
-                <b>Parking</b>
-              </label>
-            </div>
-
-            <select
-              id="select4"
-              name="parking"
-              className="mb-3 dropbox_contact"
-              onChange={dropchange}
-              value={drop.parking}
-            >
-              <option value="Available">Available</option>
-              <option value="Not-Available">Not-Available</option>
-            </select>
-          </div>
-
-          {/* Food_available */}
-          <div>
+              <div className="col">
+                {/* Room Cleaning */}
+                <div>
                   <div>
                     <label
-                      htmlFor="Food_available"
+                      htmlFor="Room_cleaning"
                       className="form-label label_contact"
                     >
-                      <b>Food Available</b>
+                      <b>Room Cleaning</b>
+                    </label>
+                  </div>
+                  <select
+                    id="select18"
+                    name="Room_cleaning"
+                    value={drop.Room_cleaning}
+                    onChange={dropchange}
+                    className="mb-3 dropbox_contact"
+                  >
+                    <option value="Available">Available</option>
+                    <option value="Not-Available">Not-Available</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Other Changes */}
+          <div class="container text-center shadow">
+            <h4 className="text-centre">Other Details</h4>
+
+            <div class="row align-items-start">
+              <div className="col">
+                {/* water_charges  */}
+                <div>
+                  <div>
+                    <label
+                      htmlFor="water_charges"
+                      className="form-label label_contact"
+                    >
+                      <b>Water Charges </b>
                     </label>
                   </div>
 
                   <select
-                    id="select2"
-                    name="Food_available"
-                    className="mb-3 dropbox_contact"
+                    id="water_charges"
+                    name="water_charges"
+                    className="mb-3 dropbox_contact px-3"
                     onChange={dropchange}
-                    value={drop.Food_available}
+                    value={drop.water_charges}
                   >
-                    <option value="Vegetarien">Vegetarien</option>
-                    <option value="Non-Vegetarien">Non-Vegetarien</option>
-                    <option value="Both">Both</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
                   </select>
                 </div>
+              </div>
 
-          {/* power */}
-          <div>
-            <div className="d-none">
-              <label
-                htmlFor="power_backup"
-                className="form-label label_contact"
-              >
-                <b>Power</b>
-              </label>
+              <div className="col">
+                {/* Gender */}
+                <div>
+                  <div>
+                    <label
+                      htmlFor="Gender"
+                      className="form-label label_contact"
+                    >
+                      <b>Pg For Gender</b>
+                    </label>
+                  </div>
+                  <select
+                    id="Gender"
+                    name="Gender"
+                    className="mb-3 dropbox_contact px-2"
+                    value={drop.Gender}
+                    onChange={dropchange}
+                  >
+                    <option value="Unisex">Unisex</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col">
+                {/* maintenance  */}
+                <div>
+                  <div>
+                    <label
+                      htmlFor="maintenance"
+                      className="form-label label_contact"
+                    >
+                      <b>Maintenance </b>
+                    </label>
+                  </div>
+
+                  <select
+                    id="maintenance"
+                    name="maintenance"
+                    className="mb-3 dropbox_contact px-3"
+                    onChange={dropchange}
+                    value={drop.maintenance}
+                  >
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="col">
+                {/* Laundry */}
+                <div>
+                  <div>
+                    <label
+                      htmlFor="laundry"
+                      className="form-label label_contact"
+                    >
+                      <b>Laundry </b>
+                    </label>
+                  </div>
+
+                  <select
+                    id="laundry"
+                    name="laundry"
+                    className="mb-3 dropbox_contact"
+                    onChange={dropchange}
+                    value={drop.laundry}
+                  >
+                    <option value="Available">Available</option>
+                    <option value="Not-Available">Not-Available</option>
+                  </select>
+                </div>
+              </div>
             </div>
-            <select
-              id="select17"
-              name="power_backup"
-              value={drop.power_backup}
-              onChange={dropchange}
-              className="mb-3 dropbox_contact d-none"
-            >
-              <option value="Available">Available</option>
-              <option value="Not-Available">Not-Available</option>
-            </select>
+
+            <div class="row align-items-start">
+              <div class="col">
+                {/* Preferred  Tenants */}
+                <div>
+                  <div>
+                    <label
+                      htmlFor="preferred_tenants"
+                      className="form-label label_contact"
+                    >
+                      <b>Preferred Tenants </b>
+                    </label>
+                  </div>
+
+                  <select
+                    id="preferred_tenants"
+                    name="preferred_tenants"
+                    className="mb-3 dropbox_contact"
+                    value={drop.preferred_tenants}
+                    onChange={dropchange}
+                  >
+                    <option value="Students">Students</option>
+                    <option value="Working Person">Working Person</option>
+                    <option value="Family">Family</option>
+                    <option value="All">All</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="col">
+                {/* power  */}
+                <div>
+                  <div className="">
+                    <label htmlFor="Power" className="form-label label_contact">
+                      <b>Power</b>
+                    </label>
+                  </div>
+                  <select
+                    id="Power"
+                    name="Power"
+                    value={drop.Power}
+                    onChange={dropchange}
+                    className="mb-3 dropbox_contact"
+                  >
+                    <option value="Available">Available</option>
+                    <option value="Not-Available">Not-Available</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="col">
+                {/* available_for */}
+                <div>
+                  <div className="">
+                    <label
+                      htmlFor="available_for"
+                      className="form-label label_contact"
+                    >
+                      <b>Available For </b>
+                    </label>
+                  </div>
+
+                  <select
+                    id="available_for"
+                    name="available_for"
+                    className="mb-3 dropbox_contact "
+                  >
+                    <option value="Boys">Boys</option>
+                    <option value="Boys & Girls">Boys & Girls</option>
+                    <option value="Girls">Girls</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
-
-          {/* To Do  maintence */}
-          {/* <div>
-            <label htmlFor="city" className="form-label label_contact">
-              <b>Maintenance Charges(TODO)</b>
-            </label>
-          </div>
-
-          <select id="select" className="mb-3 dropbox_contact">
-            <option value="Available">Available</option>
-            <option value="Not-Available">Not-Available</option>
-          </select> */}
-
-          {/* To Do  water */}
-          {/* <div>
-            <label htmlFor="city" className="form-label label_contact">
-              <b>Water Charges(todo)</b>
-            </label>
-          </div>
-
-          <select id="select" className="mb-3 dropbox_contact">
-            <option value="Available">Available</option>
-            <option value="Not-Available">Not-Available</option>
-          </select> */}
-
-          {/* Changes in amount */}
-          {/* <div>
-            <label htmlFor="city" className="form-label label_contact">
-              <b>Deposite Amount (todo)</b>
-            </label>
-          </div>
-
-          <input type="number" /> */}
-
-          {/* changes */}
-          {/* <div>
-            <label htmlFor="city" className="form-label label_contact">
-              <b>Notice Period (todo)</b>
-            </label>
-          </div>
-          <input type="number" placeholder="Enter value in Month" /> */}
-
-          {/* Gate Timing changes */}
-          {/* <div>
-            <label htmlFor="city" className="form-label label_contact">
-              <b>Gate Timing (todo)</b>
-            </label>
-          </div>
-          <input type="number" placeholder="Enter value in Month" />
-
-         
-       
-          <div className="mb-3">
-            <label
-              htmlFor="exampleInputPassword1"
-              className="form-label owner_details"
-            >
-              <b>PG Name</b>
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="pg_name"
-              required
-              name="pg_name"
-              minLength={5}
-              value={details.pg_name}
-              onChange={changehandler}
-            />
-          </div>
-
-          <div className="mb-3">
-            <label
-              htmlFor="exampleInputEmail1"
-              className="form-label owner_details"
-            >
-              <b>Email address</b>
-            </label>
-            <input
-              type="email"
-              className="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              required
-              name="email"
-              value={details.email}
-              onChange={changehandler}
-            />
-          </div> */}
 
           <button type="submit" className="btn btn-primary my-5">
             Submit

@@ -168,7 +168,7 @@ const Details = (props) => {
                                     <div className="row">
                                         <div className="col"><span className='small_val'>{pg[0].deposit}</span></div>
                                         <div className="col"> <span className='small_val'>{pg[0].maintenance.charAt(0).toUpperCase() + pg[0].maintenance.slice(1)}</span></div>
-                                        <div className="col"> <span className='small_val'>{pg[0].Notice_period} Month</span></div>
+                                        <div className="col"> <span className='small_val'>{pg[0].Notice_period}</span></div>
                                         <div className="col"> <span className='small_val'>{pg[0].water_charges.charAt(0).toUpperCase() + pg[0].water_charges.slice(1)}</span></div>
                                     </div>
 
@@ -228,7 +228,7 @@ const Details = (props) => {
                                 <div className="col small_div d-flex "><span>Notice Period</span>
                                     <span style={{ color: '#909090' }}>
                                         {
-                                            pg[0].Notice_period.length > 0 ? `${pg[0].Notice_period} Month` : <i className="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
+                                            pg[0].Notice_period.length > 0 ? `${pg[0].Notice_period} ` : <i className="fa-sharp fa-solid fa-circle-xmark fa-lg" style={{ color: '#e70453' }}></i>
                                         }
 
                                     </span>
