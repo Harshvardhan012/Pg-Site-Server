@@ -9,6 +9,10 @@ const Pgcites = (props) => {
 
     let { city } = useParams();
     let da = props.data;
+
+    //changes
+    // console.log(da[0]._id); 
+
     const [search_data, setsearch_data] = useState(da);
     const [citydata, setcitydata] = useState(da);
     const Navigator = useNavigate();
@@ -40,7 +44,7 @@ const Pgcites = (props) => {
     useEffect(() => {
         if (!localStorage.getItem('token')) {
             Navigator('/');
-                toast.warning(`Please Login To Continue`, {
+                toast.warning(`Pg Added Successfully`, {
                 position: "top-right",
                 autoClose: 900,
                 hideProgressBar: false,
@@ -76,6 +80,7 @@ const Pgcites = (props) => {
     }
 
     const handleclick = (e) => {
+        // console.log(da._id) 
     }
 
     const renttogenderfilterswitch = () => {
@@ -343,6 +348,7 @@ const Pgcites = (props) => {
 
                 <div >
                     <div className='sort_by_div'>
+                        {/* Upper Section */}
                         <div className='upper d-flex'>
                             <b style={{ color: '#041073', fontSize: 20 }}>{citydata.length} Result Found </b>
                             <div>
@@ -360,6 +366,7 @@ const Pgcites = (props) => {
 
                         </div>
                     </div>
+
                     <div className='container data'>
 
                         {
@@ -374,7 +381,7 @@ const Pgcites = (props) => {
 
                                                 <div className='pg_div container'>
                                                     <div className='div_img'>
-                                                        <img src={data.src12} alt="lodaing" className='pg_img' />
+                                                        <img src={`http://localhost:5000/${data.src1}`} alt="PICS NOT AVAILABLE" className='pg_img text-center' />
                                                     </div>
 
                                                     {/*pg name and gender logo  */}
@@ -429,7 +436,7 @@ const Pgcites = (props) => {
 
                                                     {/* View Pg Details Button */}
                                                     <div className='div_btn'>
-                                                        <button className='btn' onClick={(e) => handleclick(navi(`/pgdetails/${data.id}`))}>View Details</button>
+                                                        <button className='btn' onClick={(e) => handleclick(navi(`/pgdetails/${data._id}`))}>View Details</button>
                                                     </div>
                                                 </div>
 
@@ -445,9 +452,7 @@ const Pgcites = (props) => {
 
                                                 <div className='pg_div'>
                                                     <div className='div_img'>
-
-                                                        <img src={data.src3} alt="lodaing" className='pg_img' />
-
+                                                        <img src={`http://localhost:5000/${data.src1}`} alt="PICS NOT AVAILABLE" className='pg_img text-center' />
                                                     </div>
 
 
@@ -500,7 +505,8 @@ const Pgcites = (props) => {
 
                                                     {/* View Pg Details Button */}
                                                     <div className='div_btn'>
-                                                        <button className='btn' onClick={(e) => handleclick(navi(`/pgdetails/${data.id}`))}>View Details</button>
+                                                        
+                                                        <button className='btn' onClick={(e) => handleclick(navi(`/pgdetails/${data._id}`))}>View Details</button>
                                                     </div>
                                                 </div>
                                             </div>

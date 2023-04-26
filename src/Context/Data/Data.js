@@ -12,7 +12,8 @@ const Data = (props) => {
   const getNote = async () => {
   
     // Api call
-    const response = await fetch(`${host}/api/details/fetchallnotes`, {
+    // const response = await fetch(`${host}/api/details/fetchallnotes`, {
+    const response = await fetch(`${host}/api/upload/fetchallnotes`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

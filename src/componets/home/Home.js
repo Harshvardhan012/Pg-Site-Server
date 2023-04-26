@@ -23,7 +23,6 @@ const Home = (props) => {
         // eslint-disable-next-line
     }, [da]);
 
-
       
     const cleartext = (e) => {
         settext('');
@@ -54,12 +53,13 @@ const Home = (props) => {
                     text &&
                     <ul className='search_result list-group'>
                         {
+                            
                             details.filter(search => search.Address.toLowerCase().includes(text.toLowerCase())).map((search,k) => (
-                                <Link to={`pgdetails/${search.id}`} style={{textDecoration:'none'}} key={k}>
+                                <Link   to={`pgdetails/${search._id}`} style={{textDecoration:'none'}} key={k}>
                                     <li className='list_item list-group-item '>
                                         <i className="fa-sharp fa-solid fa-location-dot fa-beat-fade location_icon" style={{ color: "#ee1b65" }}>
                                         </i>
-                                        {search.Address.substring(0, 55)}   
+                                        {search.Address.substring(0, 50)}   
                                     </li>
                                 </Link>
                             ))

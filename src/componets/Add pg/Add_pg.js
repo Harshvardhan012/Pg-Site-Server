@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import {useNavigate } from 'react-router-dom'
 import axios from "axios";
 import "./add_pg.css";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+import {  toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Add_Pg = () => {
   const [details, setdeatils] = useState({
@@ -22,11 +23,11 @@ const Add_Pg = () => {
   const [drop, setdrop] = useState({
     Gender: "Unisex",
     Food_available: "Vegetarien",
-    // ac_room: "Available",
-    // parking: "Available",
+    ac_room: "Available",
+    parking: "Available",
     power_backup: "Available",
     available_for: "Boys",
-    preferred_tenants: "Available",
+    preferred_tenants: "Students",
     maintenance: "Yes",
     water_charges: "Yes",
     laundry: "Available",
@@ -39,7 +40,7 @@ const Add_Pg = () => {
     Loud_Music: "Allowed",
     // Party: "Allowed",
     wifi: "Available",
-    Power: "Available",
+    // Power: "Available",
     Room_cleaning: "Available",
     Water_cooler: "Available",
     Gate_timing: "None",
@@ -47,6 +48,9 @@ const Add_Pg = () => {
     Lift: "Available",
     Warden: "Available",
   });
+
+
+  const Navigator = useNavigate();
 
   const dropchange = async (e) => {
     let id = document.getElementById(`${e.target.id}`).value;
@@ -80,8 +84,8 @@ const Add_Pg = () => {
     formData.append("Gate_timing", drop.Gate_timing);
     formData.append("Gender", drop.Gender);
     formData.append("Food_available", drop.Food_available);
-    // formData.append("ac_room", drop.ac_room);
-    // formData.append("parking", drop.parking);
+    formData.append("ac_room", drop.ac_room);
+    formData.append("parking", drop.parking);
     formData.append("power_backup", drop.power_backup);
     formData.append("available_for", drop.available_for);
     formData.append("preferred_tenants", drop.preferred_tenants);
@@ -94,7 +98,7 @@ const Add_Pg = () => {
     formData.append("Loud_Music", drop.Loud_Music);
     // formData.append("Party", drop.Party);
     formData.append("wifi", drop.wifi);
-    formData.append("Power", drop.Power);
+    // formData.append("Power", drop.Power);
     formData.append("Room_cleaning", drop.Room_cleaning);
     formData.append("Water_cooler", drop.Water_cooler);
     formData.append("Gym", drop.Gym);
@@ -107,6 +111,18 @@ const Add_Pg = () => {
     }
 
     await axios.post("http://localhost:5000/api/upload/addDetails",formData);
+
+    Navigator('/');
+    toast.warning(`Please Login To Continue`, {
+    position: "top-centre",
+    autoClose: 900,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    });
   };
 
   return (
@@ -394,10 +410,10 @@ const Add_Pg = () => {
                     className="mb-3 dropbox_contact px-1"
                   >
                     <option value="None">None</option>
-                    <option value="1">1 Month</option>
-                    <option value="2">2 Month</option>
-                    <option value="3">3 Month</option>
-                    <option value="4">4 Month</option>
+                    <option value="1 Month">1 Month</option>
+                    <option value="2 Month">2 Month</option>
+                    <option value="3 Month">3 Month</option>
+                    <option value="4 Month">4 Month</option>
                   </select>
                 </div>
               </div>
@@ -880,17 +896,38 @@ const Add_Pg = () => {
               </div>
 
               <div className="col">
-                {/* power  */}
+                {/* ac_room  */}
                 <div>
                   <div className="">
-                    <label htmlFor="Power" className="form-label label_contact">
-                      <b>Power</b>
+                    <label htmlFor="ac_room" className="form-label label_contact">
+                      <b>AC Room</b>
                     </label>
                   </div>
                   <select
-                    id="Power"
-                    name="Power"
-                    value={drop.Power}
+                    id="ac_room"
+                    name="ac_room"
+                    value={drop.ac_room}
+                    onChange={dropchange}
+                    className="mb-3 dropbox_contact"
+                  >
+                    <option value="Available">Available</option>
+                    <option value="Not-Available">Not-Available</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="col">
+                {/* parking  */}
+                <div>
+                  <div className="">
+                    <label htmlFor="parking" className="form-label label_contact">
+                      <b>Parking</b>
+                    </label>
+                  </div>
+                  <select
+                    id="parking"
+                    name="parking"
+                    value={drop.parking}
                     onChange={dropchange}
                     className="mb-3 dropbox_contact"
                   >
