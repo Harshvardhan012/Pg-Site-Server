@@ -185,6 +185,23 @@ const Header = () => {
     }
   }
 
+//              // TO Fetch User Detials
+  // if(localStorage.getItem('token'))
+  // {
+  //   const fun = async () =>{
+  //     const response = await fetch("http://localhost:5000/api/auth/getuser", {
+  //       method: "GET",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         "token" : `${localStorage.getItem('token')}`
+  //       }
+  //   })
+  //       console.log(response);
+  //     }
+
+  //   fun();
+  //   // const json = response.json();
+  // }
 
   // When value of email or password changes
   const schangehandler = (e) => {
@@ -372,6 +389,7 @@ const Header = () => {
               <button className="btn btn-primary mx-2" onClick={login} >Login</button>
               <button className="btn btn-primary" onClick={signup}>Sign Up</button>
             </form> : <form className="d-flex btn_logout" role="search">
+            <i class="fa-solid fa-user fa-xl user_details"></i>
               <button onClick={handlelogout} className="btn btn-primary" >Logout</button>
             </form>
             }

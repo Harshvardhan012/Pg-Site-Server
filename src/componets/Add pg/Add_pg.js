@@ -12,7 +12,7 @@ const Add_Pg = () => {
     Address: "",
     city: "",
     desc: "",
-    // area: "",
+    contactno1: "",
     pincode: "",
     deposit: "",
     Price: "",
@@ -77,6 +77,7 @@ const Add_Pg = () => {
     formData.append("Price", details.Price);
     formData.append("no_of_beds", details.no_of_beds);
     formData.append("opertaing_since", details.opertaing_since);
+    formData.append("contactno1", details.contactno1);
 
     formData.append("maintenance", drop.maintenance);
     formData.append("water_charges", drop.water_charges);
@@ -149,6 +150,9 @@ const Add_Pg = () => {
               required
             ></input>
           </div> */}
+
+
+          
 
           {/* Pg_name */}
 
@@ -238,6 +242,29 @@ const Add_Pg = () => {
               pattern="[0-9]{6}"
               required
             />
+          </div>
+
+{/* Contact No */}
+          <div className="mb-3">
+            <label
+              htmlFor="contactno1"
+              className="form-label owner_details"
+            >
+              <b>Enter Contact No</b>
+            </label>
+            <input
+              id="phone"
+              name="contactno1"
+              className="form-control contact_no"
+              type="tel"
+              minLength={10}
+              maxLength={10}
+              value={details.contactno1}
+              onChange={changehandler}
+              pattern="[0-9]{10}"
+              placeholder="xxxxxxxxxx"
+              required
+              />
           </div>
 
           {/* Description */}
