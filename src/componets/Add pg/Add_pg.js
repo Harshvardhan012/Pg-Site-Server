@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import {useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./add_pg.css";
-import {  toast } from "react-toastify";
+import { toast ,ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Add_Pg = () => {
@@ -26,7 +26,7 @@ const Add_Pg = () => {
     ac_room: "Available",
     parking: "Available",
     power_backup: "Available",
-    available_for: "Boys",
+    available_for: "Boys & Girls",
     preferred_tenants: "Students",
     maintenance: "Yes",
     water_charges: "Yes",
@@ -48,7 +48,6 @@ const Add_Pg = () => {
     Lift: "Available",
     Warden: "Available",
   });
-
 
   const Navigator = useNavigate();
 
@@ -111,23 +110,37 @@ const Add_Pg = () => {
       formData.append("image", file);
     }
 
-    await axios.post("http://localhost:5000/api/upload/addDetails",formData);
+    await axios.post("http://localhost:5000/api/upload/addDetails", formData);
 
-    Navigator('/');
-    toast.warning(`Please Login To Continue`, {
-    position: "top-centre",
-    autoClose: 900,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "dark",
+    toast.success(`PG Added Successfully`, {
+      position: "top-centre",
+      autoClose: 900,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
     });
+    Navigator("/");
+    setTimeout(() => { toast.dismiss() }, 500);
+    toast.dismiss()
   };
 
   return (
     <>
+      <ToastContainer
+        position="top-center"
+        autoClose={500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <div className="container my-4">
         <h1>Fill Pg Details</h1>
       </div>
@@ -151,11 +164,7 @@ const Add_Pg = () => {
             ></input>
           </div> */}
 
-
-          
-
           {/* Pg_name */}
-
           <div className="mb-3">
             <label htmlFor="pg_name" className="form-label mt-3 owner_details">
               <b>Enter PG Name</b>
@@ -244,12 +253,9 @@ const Add_Pg = () => {
             />
           </div>
 
-{/* Contact No */}
+          {/* Contact No */}
           <div className="mb-3">
-            <label
-              htmlFor="contactno1"
-              className="form-label owner_details"
-            >
+            <label htmlFor="contactno1" className="form-label owner_details">
               <b>Enter Contact No</b>
             </label>
             <input
@@ -264,7 +270,7 @@ const Add_Pg = () => {
               pattern="[0-9]{10}"
               placeholder="xxxxxxxxxx"
               required
-              />
+            />
           </div>
 
           {/* Description */}
@@ -272,15 +278,16 @@ const Add_Pg = () => {
             <label htmlFor="desc" className="form-label owner_details">
               <b>Enter Pg Description</b>
             </label>
-            <textarea
+            <input
               className="form-control"
+              minLength="120"
               id="desc"
-              value={details.desc}
-              onChange={changehandler}
               name="desc"
               rows="3"
+              value={details.desc}
+              onChange={changehandler}
               required
-            ></textarea>
+            ></input>
           </div>
 
           {/* Area */}
@@ -331,7 +338,7 @@ const Add_Pg = () => {
               className="form-control "
               type="number"
               size="6"
-              min="1"
+              min="0"
               max="10000"
               value={details.deposit}
               onChange={changehandler}
@@ -926,7 +933,10 @@ const Add_Pg = () => {
                 {/* ac_room  */}
                 <div>
                   <div className="">
-                    <label htmlFor="ac_room" className="form-label label_contact">
+                    <label
+                      htmlFor="ac_room"
+                      className="form-label label_contact"
+                    >
                       <b>AC Room</b>
                     </label>
                   </div>
@@ -947,7 +957,10 @@ const Add_Pg = () => {
                 {/* parking  */}
                 <div>
                   <div className="">
-                    <label htmlFor="parking" className="form-label label_contact">
+                    <label
+                      htmlFor="parking"
+                      className="form-label label_contact"
+                    >
                       <b>Parking</b>
                     </label>
                   </div>
@@ -981,8 +994,8 @@ const Add_Pg = () => {
                     name="available_for"
                     className="mb-3 dropbox_contact "
                   >
-                    <option value="Boys">Boys</option>
                     <option value="Boys & Girls">Boys & Girls</option>
+                    <option value="Boys">Boys</option>
                     <option value="Girls">Girls</option>
                   </select>
                 </div>

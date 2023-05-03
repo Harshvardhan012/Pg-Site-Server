@@ -7,9 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Header = () => {
   window.scrollTo(0, 0);
+  
 
   const color = "#041073";
-  
   let Navigator = useNavigate();
 
   const handlelogout = (e) => {
@@ -389,7 +389,6 @@ const Header = () => {
               <button className="btn btn-primary mx-2" onClick={login} >Login</button>
               <button className="btn btn-primary" onClick={signup}>Sign Up</button>
             </form> : <form className="d-flex btn_logout" role="search">
-            <i class="fa-solid fa-user fa-xl user_details"></i>
               <button onClick={handlelogout} className="btn btn-primary" >Logout</button>
             </form>
             }

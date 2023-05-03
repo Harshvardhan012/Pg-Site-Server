@@ -3,6 +3,7 @@ import './home.css'
 import './responsive.css'
 import { city_data } from '../../data/citydata'
 import { Link } from "react-router-dom"
+import { toast } from 'react-toastify'
 
 
 const Home = (props) => {
@@ -28,6 +29,27 @@ const Home = (props) => {
         settext('');
     }
 
+    const check = (e)=>{
+        if(!localStorage.getItem('token'))
+        {
+            toast.dismiss();
+            toast.error(`Please Login To Continue`, {
+                position: "top-center",
+                autoClose: 1200,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+              });
+        }
+        else
+        {
+            onchange(e.target.value)
+        }
+    }
+
     
     return (
 
@@ -41,7 +63,7 @@ const Home = (props) => {
             <div className='container input-group mb-3 d-flex'>
 
                 <div className='d-flex serachsection container'>
-                    <input type="text" placeholder='Enter city name, area etc..' className='searchtext' name="search" value={text} onChange={(e) => onchange(e.target.value)} autoComplete='off'/>
+                    <input type="text" placeholder='Enter city name, area etc..' className='searchtext' name="search" value={text} onClick={check} onChange={check} autoComplete='off'/>
                     <i className="fa-solid fa-xmark  serachion" onClick={cleartext}></i>
                     <button type="button" id="search" className="search-submit"><i className="fa-solid fa-location-dot px-2"></i> Near me</button>
                 </div>

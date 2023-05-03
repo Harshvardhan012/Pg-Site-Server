@@ -59,7 +59,7 @@ const Owners = () => {
       const json = await response.json();
       if (json.success) {
         toast.dismiss();
-        toast.success(`Please Fill Pg Details Correctly`, {
+        toast.success(`Please Fill PG Details Correctly`, {
           position: "top-center",
           autoClose: 1700,
           hideProgressBar: false,

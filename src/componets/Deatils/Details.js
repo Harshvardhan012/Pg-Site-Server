@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./details.css";
-import "./details_responsive.css"
-
+import "./details_responsive.css";
 
 const Details = (props) => {
   window.scrollTo(0, 0);
@@ -17,8 +16,12 @@ const Details = (props) => {
   let pg = [];
 
   useEffect(() => {
-    setdetails(da);
-    setdata(details.find(({ _id }) => _id === val));
+    if (!localStorage.getItem("token")) {
+      
+    } else {
+      setdetails(da);
+      setdata(details.find(({ _id }) => _id === val));
+    }
 
     // eslint-disable-next-line
   }, [props.data, data]);
@@ -52,7 +55,9 @@ const Details = (props) => {
 
   useEffect(() => {
     // eslint-disable-next-line
-    sliderContainer = document.getElementsByClassName("details_slider-container");
+    sliderContainer = document.getElementsByClassName(
+      "details_slider-container"
+    );
     // eslint-disable-next-line
     images = document.querySelectorAll(".details_slider-container img");
   }, [previous, next]);
@@ -82,28 +87,27 @@ const Details = (props) => {
   };
 
   const openModal = useRef();
-//   const closeModal = useRef();
+  //   const closeModal = useRef();
 
-  const contact_details = ()=>{
+  const contact_details = () => {
     openModal.current.click();
-  } 
+  };
 
   const [pg_name, setpg_name] = useState("");
   const [contact, setcontact] = useState("");
 
-  const setvalues = (e)=>{
+  const setvalues = (e) => {
     e.preventDefault();
     setpg_name(pg[0].pg_name);
     // console.log(pg[0].contactno1);
     setcontact(pg[0].contactno1);
-  }
+  };
 
   return (
     <>
       {/* modal */}
 
-
-     <button
+      <button
         ref={openModal}
         type="button"
         className="btn btn-primary d-none"
@@ -112,9 +116,9 @@ const Details = (props) => {
         onClick={setvalues}
       >
         Launch demo modal
-      </button> 
+      </button>
 
-       <div
+      <div
         className="modal fade"
         id="exampleModal"
         tabIndex="-1"
@@ -125,7 +129,7 @@ const Details = (props) => {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title fs-5" id="exampleModalLabel">
-                  {pg_name.substring(0,27)}
+                {pg_name.substring(0, 27)}
               </h5>
               <button
                 type="button"
@@ -134,9 +138,7 @@ const Details = (props) => {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body">
-              Contact No : {contact}
-            </div>
+            <div className="modal-body">Contact No : {contact}</div>
             <div className="modal-footer">
               <button
                 type="button"
@@ -146,7 +148,6 @@ const Details = (props) => {
               >
                 Close
               </button>
-             
             </div>
           </div>
         </div>
@@ -158,23 +159,27 @@ const Details = (props) => {
           </div>
         </div>
       ) */}
-      
 
       {pg.length > 0 ? (
         <div>
-
           {/* Upper Section */}
           <div className="details_upper_section d-flex">
-           
             <div className="details_upperrent ">
-              <p> <b>Rent/Bed</b></p>
-              <b style={{  paddingRight: 3 }} className="details_res_price">₹{pg[0].Price}</b>
+              <p>
+                {" "}
+                <b>Rent/Bed</b>
+              </p>
+              <b style={{ paddingRight: 3 }} className="details_res_price">
+                ₹{pg[0].Price}
+              </b>
               onwards
             </div>
 
             <div className="details_upperright">
               <div>
-                <h2 className="details_upper_name">{pg[0].pg_name.substring(0, 20)}</h2>
+                <h2 className="details_upper_name">
+                  {pg[0].pg_name.substring(0, 20)}
+                </h2>
                 <p className="local_area">
                   Pincode{" "}
                   <Link style={{ textDecoration: "none" }}>
@@ -188,9 +193,11 @@ const Details = (props) => {
                 </span>
               </div>
             </div>
-              <div className="details_phone_no_div">
-                <button className="details_contact" onClick={contact_details}>View Phone No</button>
-              </div>
+            <div className="details_phone_no_div">
+              <button className="details_contact" onClick={contact_details}>
+                View Phone No
+              </button>
+            </div>
           </div>
 
           {/* Navbar  */}
@@ -227,10 +234,8 @@ const Details = (props) => {
             </div>
           </nav>
 
-
           {/* Details  */}
           <div className=" container d-flex details_pg_deatils" id="details">
-
             {/* Image Section */}
 
             <div className="details_left_part">
@@ -253,8 +258,15 @@ const Details = (props) => {
                 </div>
               </div>
               <div className="d-flex my-4 mx-4">
-                <button className="details_contact" onClick={contact_details}>View Phone No</button>
-                <button className="details_contact mx-4" onClick={contact_details}>Contact Owner</button>
+                <button className="details_contact" onClick={contact_details}>
+                  View Phone No
+                </button>
+                <button
+                  className="details_contact mx-4"
+                  onClick={contact_details}
+                >
+                  Contact Owner
+                </button>
               </div>
             </div>
 
@@ -266,22 +278,35 @@ const Details = (props) => {
                   {pg[0].pg_name.substring(0, 30)}
                 </h3>
                 <p className="details_pg_desc" style={{ color: "#909090" }}>
-                  {pg[0].desc.substring(0, 210)}
+                  <b>Description : </b>
+                  {pg[0].desc.substring(0, 400)}
                 </p>
               </div>
               <hr />
               <div className="container">
                 <div className="row">
-                  <div className="col details_small_div" style={{ color: "#909090" }}>
+                  <div
+                    className="col details_small_div"
+                    style={{ color: "#909090" }}
+                  >
                     Deposit Amount
                   </div>
-                  <div className="col details_small_div" style={{ color: "#909090" }}>
+                  <div
+                    className="col details_small_div"
+                    style={{ color: "#909090" }}
+                  >
                     Maintenance
                   </div>
-                  <div className="col details_small_div" style={{ color: "#909090" }}>
+                  <div
+                    className="col details_small_div"
+                    style={{ color: "#909090" }}
+                  >
                     Notice Period
                   </div>
-                  <div className="col details_small_div" style={{ color: "#909090" }}>
+                  <div
+                    className="col details_small_div"
+                    style={{ color: "#909090" }}
+                  >
                     Water Charges
                   </div>
                 </div>
@@ -298,7 +323,9 @@ const Details = (props) => {
                   </div>
                   <div className="col">
                     {" "}
-                    <span className="details_small_val">{pg[0].Notice_period}</span>
+                    <span className="details_small_val">
+                      {pg[0].Notice_period}
+                    </span>
                   </div>
                   <div className="col">
                     {" "}
@@ -312,16 +339,28 @@ const Details = (props) => {
               <hr />
               <div className="container">
                 <div className="row">
-                  <div className="col details_small_div" style={{ color: "#909090" }}>
+                  <div
+                    className="col details_small_div"
+                    style={{ color: "#909090" }}
+                  >
                     Food Availability
                   </div>
-                  <div className="col details_small_div" style={{ color: "#909090" }}>
+                  <div
+                    className="col details_small_div"
+                    style={{ color: "#909090" }}
+                  >
                     AC Rooms
                   </div>
-                  <div className="col details_small_div" style={{ color: "#909090" }}>
+                  <div
+                    className="col details_small_div"
+                    style={{ color: "#909090" }}
+                  >
                     Parking
                   </div>
-                  <div className="col details_small_div" style={{ color: "#909090" }}>
+                  <div
+                    className="col details_small_div"
+                    style={{ color: "#909090" }}
+                  >
                     Power Backup
                   </div>
                 </div>
@@ -358,16 +397,28 @@ const Details = (props) => {
               <hr />
               <div className="container my-3">
                 <div className="row">
-                  <div className="col details_small_div" style={{ color: "#909090" }}>
+                  <div
+                    className="col details_small_div"
+                    style={{ color: "#909090" }}
+                  >
                     Available For
                   </div>
-                  <div className="col details_small_div" style={{ color: "#909090" }}>
+                  <div
+                    className="col details_small_div"
+                    style={{ color: "#909090" }}
+                  >
                     Total Room Available
                   </div>
-                  <div className="col details_small_div" style={{ color: "#909090" }}>
+                  <div
+                    className="col details_small_div"
+                    style={{ color: "#909090" }}
+                  >
                     Preferred Tenants
                   </div>
-                  <div className="col details_small_div" style={{ color: "#909090" }}>
+                  <div
+                    className="col details_small_div"
+                    style={{ color: "#909090" }}
+                  >
                     Operating Since
                   </div>
                 </div>
@@ -380,7 +431,9 @@ const Details = (props) => {
                   </div>
                   <div className="col">
                     {" "}
-                    <span className="details_small_val">{pg[0].no_of_beds}</span>
+                    <span className="details_small_val">
+                      {pg[0].no_of_beds}
+                    </span>
                   </div>
                   <div className="col">
                     {" "}
@@ -391,7 +444,9 @@ const Details = (props) => {
                   </div>
                   <div className="col">
                     {" "}
-                    <span className="details_small_val">{pg[0].opertaing_since}</span>
+                    <span className="details_small_val">
+                      {pg[0].opertaing_since}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -424,8 +479,6 @@ const Details = (props) => {
                 <span>Notice Period</span>
                 <span style={{ color: "#909090" }}>
                   {`${pg[0].Notice_period}`}
-
-
 
                   {/* {pg[0].Notice_period.length > 0 ? (
                     `${pg[0].Notice_period} `
@@ -710,7 +763,10 @@ const Details = (props) => {
             </div>
           </div>
 
-          <div className="container details_houserule details_sm-other text-center" id="other">
+          <div
+            className="container details_houserule details_sm-other text-center"
+            id="other"
+          >
             <div className="row d-flex">
               <h3 className="details_title my-4"> Other Charges</h3>
               <div className="col details_small_div">

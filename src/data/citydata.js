@@ -18,7 +18,7 @@ export const city_data = [
     },
     {
         "img": "https://bookmypg.co.in/assets/front/images/newdelhi.jpg",
-        "name": "New Delhi"
+        "name": "Delhi"
     },
     {
         "img": "https://bookmypg.co.in/assets/front/images/mumbai.jpg",
