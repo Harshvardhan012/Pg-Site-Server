@@ -58,25 +58,25 @@ const Footer = () => {
                         ></Link>
                     </section>
 
-                    <section class="">
+                    <section className="">
                         <form action="">
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-auto">
-                                    <p class="pt-2">
+                            <div className="row d-flex justify-content-center">
+                                <div className="col-auto">
+                                    <p className="pt-2">
                                         <strong>Sign up for New Updates</strong>
                                     </p>
                                 </div>
 
-                                <div class="col-md-5 col-12">
-                                    <div class="form-outline mb-4">
-                                        <input type="email" id="form5Example2" class="form-control" placeholder='Enter Your Email'/>
+                                <div className="col-md-5 col-12">
+                                    <div className="form-outline mb-4">
+                                        <input type="email" id="form5Example2" className="form-control" placeholder='Enter Your Email'/>
                                         
                                     </div>
                                 </div>
 
-                                <div class="col-auto">
+                                <div className="col-auto">
 
-                                    <button type="submit" class="btn btn-primary mb-4 button">
+                                    <button type="submit" className="btn btn-primary mb-4 button">
                                         Subscribe
                                     </button>
                                 </div>
@@ -85,7 +85,7 @@ const Footer = () => {
                     </section>
 
 
-                    <section class="mb-4">
+                    <section className="mb-4">
                         <p>
                         Find My PG is India's Largest growing "PG Rental Network" attempting to provide better Paying Guest Accommodation Via our technology platform. We help find the best PG rental across Major Indian Cities..
                         </p>

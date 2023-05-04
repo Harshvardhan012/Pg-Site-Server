@@ -86,7 +86,7 @@ const Contact = () => {
                 <div className='left_part_contact mt-5'>
                     <div className=' d-flex mb-5 div_fix_details'>
                         <div>
-                            <i class="fa-sharp fa-solid fa-location-dot fa-2xl my-4 mx-3"></i>
+                            <i className="fa-sharp fa-solid fa-location-dot fa-2xl my-4 mx-3"></i>
                         </div >
                         <div className=' d-flex' style={{ flexDirection: 'column' }}>
                             <span style={{ color: 'rgb(4, 16, 215)' }}><strong>ADDRESS</strong></span>
@@ -96,7 +96,7 @@ const Contact = () => {
 
                     <div className='d-flex mb-5 div_fix_details'>
                         <div >
-                            <i class="fa-solid fa-phone fa-2xl my-4 mx-2"></i>
+                            <i className="fa-solid fa-phone fa-2xl my-4 mx-2"></i>
                         </div >
                         <div className=' d-flex' style={{ flexDirection: 'column' }}>
                             <span style={{ color: 'rgb(4, 16, 215)' }}><strong>Phone</strong></span>
@@ -107,7 +107,7 @@ const Contact = () => {
 
                     <div className='d-flex mb-5'>
                         <div >
-                            <i class="fa-sharp fa-solid fa-envelope  fa-2xl my-4 mx-1"></i>
+                            <i className="fa-sharp fa-solid fa-envelope  fa-2xl my-4 mx-1"></i>
                         </div >
                         <div className=' d-flex div_fix_details' style={{ flexDirection: 'column' }}>
                             <span style={{ color: 'rgb(4, 16, 215)' }} className='mx-2'><strong>EMAIL</strong></span>

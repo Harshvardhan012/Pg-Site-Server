@@ -54,7 +54,8 @@ const Pgcites = (props) => {
         progress: undefined,
         theme: "dark",
       });
-    } else {
+    } 
+    else {
       setsearch_data(da);
       var newdata = search_data.filter(function (a) {
         return a.city.toLowerCase() === `${city.toLowerCase()}`;

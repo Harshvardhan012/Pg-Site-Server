@@ -391,10 +391,10 @@ const Add_Pg = () => {
           </div>
 
           {/* PG Rules */}
-          <div class="container text-center shadow">
+          <div className="container text-center shadow">
             <h4 className="text-centre">PG Rules</h4>
-            <div class="row align-items-start">
-              <div class="col">
+            <div className="row align-items-start">
+              <div className="col">
                 {/* Gate timing */}
                 <div>
                   <div>
@@ -425,7 +425,7 @@ const Add_Pg = () => {
                 </div>
               </div>
 
-              <div class="col">
+              <div className="col">
                 {/* Notice_period */}
                 <div>
                   <div>
@@ -452,7 +452,7 @@ const Add_Pg = () => {
                 </div>
               </div>
 
-              <div class="col">
+              <div className="col">
                 {/*Drinking */}
                 <div>
                   <div>
@@ -476,7 +476,7 @@ const Add_Pg = () => {
                 </div>
               </div>
 
-              <div class="col">
+              <div className="col">
                 {/*Music */}
 
                 <div>
@@ -502,7 +502,7 @@ const Add_Pg = () => {
               </div>
             </div>
 
-            <div class="row align-items-start">
+            <div className="row align-items-start">
               <div className="col">
                 {/* Visitor */}
                 <div>
@@ -602,10 +602,10 @@ const Add_Pg = () => {
           </div>
 
           {/* Common Area and Amenities */}
-          <div class="container text-center shadow">
+          <div className="container text-center shadow">
             <h4 className="text-centre">Common Area and Amenities</h4>
-            <div class="row align-items-start">
-              <div class="col">
+            <div className="row align-items-start">
+              <div className="col">
                 {/* Wifi */}
                 <div>
                   <div>
@@ -626,7 +626,7 @@ const Add_Pg = () => {
                 </div>
               </div>
 
-              <div class="col">
+              <div className="col">
                 {/* power backup */}
                 <div>
                   <div>
@@ -677,7 +677,7 @@ const Add_Pg = () => {
                 </div>
               </div>
 
-              <div class="col">
+              <div className="col">
                 {/* Water Cooler */}
                 <div>
                   <div>
@@ -702,7 +702,7 @@ const Add_Pg = () => {
               </div>
             </div>
 
-            <div class="row align-items-start">
+            <div className="row align-items-start">
               <div className="col">
                 {/* Gym */}
                 <div>
@@ -796,10 +796,10 @@ const Add_Pg = () => {
           </div>
 
           {/* Other Changes */}
-          <div class="container text-center shadow">
+          <div className="container text-center shadow">
             <h4 className="text-centre">Other Details</h4>
 
-            <div class="row align-items-start">
+            <div className="row align-items-start">
               <div className="col">
                 {/* water_charges  */}
                 <div>
@@ -850,7 +850,7 @@ const Add_Pg = () => {
                 </div>
               </div>
 
-              <div class="col">
+              <div className="col">
                 {/* maintenance  */}
                 <div>
                   <div>
@@ -901,8 +901,8 @@ const Add_Pg = () => {
               </div>
             </div>
 
-            <div class="row align-items-start">
-              <div class="col">
+            <div className="row align-items-start">
+              <div className="col">
                 {/* Preferred  Tenants */}
                 <div>
                   <div>

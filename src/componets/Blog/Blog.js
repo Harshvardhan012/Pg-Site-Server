@@ -19,7 +19,7 @@ const Blog = () => {
 
                 <div className='container-xxl d-flex my-3 colblog'>
                     <div className='container image_section_blog '>
-                        <img src="https://www.canarahsbclife.com/content/dam/choice/blog-inner/images/how-to-save-money.jpg" alt="Loading" class="w100 img_blog" />
+                        <img src="https://www.canarahsbclife.com/content/dam/choice/blog-inner/images/how-to-save-money.jpg" alt="Loading" className="w100 img_blog" />
                     </div>
 
                     <div className='content_section_blog'>
@@ -32,7 +32,7 @@ const Blog = () => {
                         </p>
 
 
-                        <Link style={{ color: "rgb(1, 159, 233)", textDecoration: 'none' }}to={`/${0}`}><b>Continue Reading </b><i class="fa-solid fa-arrow-right fa-sm my-2"></i></Link>
+                        <Link style={{ color: "rgb(1, 159, 233)", textDecoration: 'none' }}to={`/${0}`}><b>Continue Reading </b><i className="fa-solid fa-arrow-right fa-sm my-2"></i></Link>
 
                     </div>
                 </div>
@@ -41,7 +41,7 @@ const Blog = () => {
 
                 <div className='container-xxl d-flex my-5 colblog'>
                     <div className=' conatiner image_section_blog '>
-                        <img src={imgs} alt="Loading" class="w100 img_blog" />
+                        <img src={imgs} alt="Loading" className="w100 img_blog" />
                     </div>
 
                     <div className='content_section_blog'>
@@ -54,14 +54,14 @@ const Blog = () => {
                         </p>
 
 
-                        <Link style={{ color: "rgb(1, 159, 233)", textDecoration: 'none' }}to={`/${1}`}><b>Continue Reading </b><i class="fa-solid fa-arrow-right fa-sm my-2"></i></Link>
+                        <Link style={{ color: "rgb(1, 159, 233)", textDecoration: 'none' }}to={`/${1}`}><b>Continue Reading </b><i className="fa-solid fa-arrow-right fa-sm my-2"></i></Link>
 
                     </div>
                 </div>
 
                 <div className='container-xxl d-flex my-5 colblog'>
                         <div className='container image_section_blog'>
-                            <img src="https://bookmypg.co.in/storage/blog/medium/2021/04/359cda551c2b3628cf905bf59f6ad1e90301680.jpeg" alt="Loading" class="w100 img_blog" />
+                            <img src="https://bookmypg.co.in/storage/blog/medium/2021/04/359cda551c2b3628cf905bf59f6ad1e90301680.jpeg" alt="Loading" className="w100 img_blog" />
                         </div>
 
                         <div className='content_section_blog '>
@@ -73,7 +73,7 @@ const Blog = () => {
                                 </b>
                             </p>
 
-                            <Link style={{ color: "rgb(1, 159, 233)", textDecoration: 'none' }} to={`/${2}`}><b>Continue Reading </b><i class="fa-solid fa-arrow-right fa-sm my-2"></i></Link>
+                            <Link style={{ color: "rgb(1, 159, 233)", textDecoration: 'none' }} to={`/${2}`}><b>Continue Reading </b><i className="fa-solid fa-arrow-right fa-sm my-2"></i></Link>
 
                         </div>
                     </div>
@@ -83,7 +83,7 @@ const Blog = () => {
 
                 <div className='container-xxl d-flex my-5 colblog'>
                     <div className=' conatiner image_section_blog '>
-                        <img src="https://bookmypg.co.in/storage/blog/medium/2020/10/a1b236240966fbb6d6a4c531d8c3df6f0245119.jpeg" alt="Loading" class="w100 img_blog" />
+                        <img src="https://bookmypg.co.in/storage/blog/medium/2020/10/a1b236240966fbb6d6a4c531d8c3df6f0245119.jpeg" alt="Loading" className="w100 img_blog" />
                     </div>
 
                     <div className='content_section_blog'>
@@ -96,7 +96,7 @@ const Blog = () => {
                         </p>
 
 
-                        <Link style={{ color: "rgb(1, 159, 233)", textDecoration: 'none' }}to={`/${3}`}><b>Continue Reading </b><i class="fa-solid fa-arrow-right fa-sm my-2"></i></Link>
+                        <Link style={{ color: "rgb(1, 159, 233)", textDecoration: 'none' }}to={`/${3}`}><b>Continue Reading </b><i className="fa-solid fa-arrow-right fa-sm my-2"></i></Link>
 
                     </div>
                 </div>
@@ -104,7 +104,7 @@ const Blog = () => {
 
                 <div className='container-xxl d-flex my-5 colblog'>
                     <div className=' conatiner image_section_blog '>
-                        <img src="https://www.bu.edu/bhr/files/2021/05/6.png" alt="Loading" class="w100 img_blog" />
+                        <img src="https://www.bu.edu/bhr/files/2021/05/6.png" alt="Loading" className="w100 img_blog" />
                     </div>
 
                     <div className='content_section_blog'>
@@ -116,7 +116,7 @@ const Blog = () => {
 
                             </b>
                         </p>
-                        <Link style={{ color: "rgb(1, 159, 233)", textDecoration: 'none' }}to={`/${4}`}><b>Continue Reading </b><i class="fa-solid fa-arrow-right fa-sm my-2"></i></Link>
+                        <Link style={{ color: "rgb(1, 159, 233)", textDecoration: 'none' }}to={`/${4}`}><b>Continue Reading </b><i className="fa-solid fa-arrow-right fa-sm my-2"></i></Link>
 
                     </div>
                 </div>

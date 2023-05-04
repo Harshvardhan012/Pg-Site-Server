@@ -17,7 +17,7 @@ const About = () => {
       <div className='container about_section'>
 
         <div className='left_part_div_about'>
-          <img src="https://bookmypg.co.in/assets/front/images/about-01.jpg" alt="" class="about_img" />
+          <img src="https://bookmypg.co.in/assets/front/images/about-01.jpg" alt="" className="about_img" />
         </div>
 
         <div className='right_part_div_about'>
@@ -52,7 +52,7 @@ const About = () => {
           </div>
         </div>
         <div className='left_part_div_about'>
-          <img src="https://bookmypg.co.in/assets/front/images/about-01.jpg" alt="" class="about_img" />
+          <img src="https://bookmypg.co.in/assets/front/images/about-01.jpg" alt="" className="about_img" />
         </div>
       </div>
 
@@ -60,7 +60,7 @@ const About = () => {
       <div className='container about_section'>
 
         <div className='left_part_div_about'>
-          <img src="https://bookmypg.co.in/assets/front/images/about-01.jpg" alt="" class="about_img" />
+          <img src="https://bookmypg.co.in/assets/front/images/about-01.jpg" alt="" className="about_img" />
         </div>
 
         <div className='right_part_div_about'>

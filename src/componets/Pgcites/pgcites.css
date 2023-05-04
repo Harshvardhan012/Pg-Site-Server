@@ -95,6 +95,7 @@
 
 .City_check_box{
     color: black;
+    font-size: 13px;
     cursor: pointer;
     border: 2px solid rgba(0, 0, 0, 0.835);
 }
