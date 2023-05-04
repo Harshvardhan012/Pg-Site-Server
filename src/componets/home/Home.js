@@ -53,7 +53,7 @@ const Home = (props) => {
     );
     let data = await response.json();
 
-    // To get First Address Only
+    // To get First Word Of city Only
     let user_city = data.address.city;
     const first = user_city.split(' ').at(0);
     console.log(first);
@@ -77,6 +77,9 @@ const Home = (props) => {
           progress: undefined,
           theme: "dark",
         });
+        navigator.geolocation.getCurrentPosition(
+            successCallback
+          );
         break;
       case error.POSITION_UNAVAILABLE:
         toast.dismiss();
