@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Pg-Site-Server/static/css/main.686eb93a.css",
+    "main.js": "/Pg-Site-Server/static/js/main.89a6c83e.js",
+    "static/js/787.5f5f0c90.chunk.js": "/Pg-Site-Server/static/js/787.5f5f0c90.chunk.js",
+    "static/media/pg_money.jpg": "/Pg-Site-Server/static/media/pg_money.a92e4668cefe5c3bebcf.jpg",
+    "static/media/logo.png": "/Pg-Site-Server/static/media/logo.5e7ad02ccd366f3c3637.png",
+    "index.html": "/Pg-Site-Server/index.html",
+    "main.686eb93a.css.map": "/Pg-Site-Server/static/css/main.686eb93a.css.map",
+    "main.89a6c83e.js.map": "/Pg-Site-Server/static/js/main.89a6c83e.js.map",
+    "787.5f5f0c90.chunk.js.map": "/Pg-Site-Server/static/js/787.5f5f0c90.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.686eb93a.css",
+    "static/js/main.89a6c83e.js"
+  ]
+}
