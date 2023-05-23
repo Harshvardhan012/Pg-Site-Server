@@ -569,7 +569,7 @@ const Pgcites = (props) => {
                         <div className="pg_div container">
                           <div className="City_div_img">
                             <img
-                              src={`http://localhost:5000/${data.src1}`}
+                              src={`https://find-my-pg-backend.onrender.com/${data.src1}`}
                               alt="PICS NOT AVAILABLE"
                               className="City_pg_img text-center"
                             />
@@ -671,7 +671,7 @@ const Pgcites = (props) => {
                         <div className="pg_div">
                           <div className="City_div_img">
                             <img
-                              src={`http://localhost:5000/${data.src1}`}
+                              src={`https://find-my-pg-backend.onrender.com/${data.src1}`}
                               alt="PICS NOT AVAILABLE"
                               className="City_pg_img text-center"
                             />

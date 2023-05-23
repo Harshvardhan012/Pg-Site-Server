@@ -241,12 +241,12 @@ const Details = (props) => {
             <div className="details_left_part">
               <div className="details_slider">
                 <div className="details_slider-container">
-                  <img src={`http://localhost:5000/${pg[0].src2}`} alt="2" />
-                  <img src={`http://localhost:5000/${pg[0].src3}`} alt="3" />
-                  <img src={`http://localhost:5000/${pg[0].src4}`} alt="4" />
-                  <img src={`http://localhost:5000/${pg[0].src5}`} alt="4" />
-                  <img src={`http://localhost:5000/${pg[0].src6}`} alt="4" />
-                  <img src={`http://localhost:5000/${pg[0].src1}`} alt="1" />
+                  <img src={`https://find-my-pg-backend.onrender.com/${pg[0].src2}`} alt="2" />
+                  <img src={`https://find-my-pg-backend.onrender.com/${pg[0].src3}`} alt="3" />
+                  <img src={`https://find-my-pg-backend.onrender.com/${pg[0].src4}`} alt="4" />
+                  <img src={`https://find-my-pg-backend.onrender.com/${pg[0].src5}`} alt="4" />
+                  <img src={`https://find-my-pg-backend.onrender.com/${pg[0].src6}`} alt="4" />
+                  <img src={`https://find-my-pg-backend.onrender.com/${pg[0].src1}`} alt="1" />
                 </div>
                 <div className="details_slider-controls">
                   <button className="details_prev-button" onClick={previous}>

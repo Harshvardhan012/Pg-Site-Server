@@ -110,7 +110,7 @@ const Add_Pg = () => {
       formData.append("image", file);
     }
 
-    await axios.post("http://localhost:5000/api/upload/addDetails", formData);
+    await axios.post("https://find-my-pg-backend.onrender.com/api/upload/addDetails", formData);
 
     toast.success(`PG Added Successfully`, {
       position: "top-centre",

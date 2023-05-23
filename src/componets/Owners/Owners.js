@@ -38,7 +38,7 @@ const Owners = () => {
       });
     } else {
       const response = await fetch(
-        "http://localhost:5000/api/owner_details/add_owner",
+        "https://find-my-pg-backend.onrender.com/api/owner_details/add_owner",
         {
           method: "POST",
           headers: {

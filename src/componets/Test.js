@@ -14,7 +14,7 @@ const Test = () => {
       formData.append("image", file);
     }
 
-    await axios.post("http://localhost:5000/api/upload/image", formData);
+    await axios.post("https://find-my-pg-backend.onrender.com/api/upload/image", formData);
   };
 
   return (

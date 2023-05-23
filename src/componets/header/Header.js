@@ -50,7 +50,7 @@ const Header = () => {
   // This will work when we sumbit form it use the fetch api at given url
   const clickhandler = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/login", {
+    const response = await fetch("https://find-my-pg-backend.onrender.com/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -107,7 +107,7 @@ const Header = () => {
 
   const sonhandler = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/createuser", {
+    const response = await fetch("https://find-my-pg-backend.onrender.com/api/auth/createuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

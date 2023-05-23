@@ -3,7 +3,7 @@ import DataContext from "./datacontext";
 
 
 const Data = (props) => {
-  const host = "http://localhost:5000"
+  const host = "https://find-my-pg-backend.onrender.com"
   const initialnotes = []
   const [dbdata, setdbdata] = useState(initialnotes);
 

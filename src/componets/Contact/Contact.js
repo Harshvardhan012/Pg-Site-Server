@@ -16,7 +16,7 @@ const Contact = () => {
     const sumbit_from = async (e) => {
         e.preventDefault();
         let select= document.querySelector('#select');
-        const response = await fetch("http://localhost:5000/api/contact_form/form", {
+        const response = await fetch("https://find-my-pg-backend.onrender.com/api/contact_form/form", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
