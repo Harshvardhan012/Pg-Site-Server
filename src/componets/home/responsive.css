@@ -100,12 +100,11 @@
 @media screen and (width<469px) {
     
     .component{
-        padding: 10px;
-        gap: 10px;
+        padding: 2px;
     }
 
     .imgs{
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 

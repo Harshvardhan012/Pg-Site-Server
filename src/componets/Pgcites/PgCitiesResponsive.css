@@ -150,7 +150,7 @@
   }
 }
 
-@media screen and (width<=440px) and (width >=0px) {
+@media screen and (width<=440px) and (width >=370px) {
   .City_sort_button {
     margin-left: 35px;
   }
@@ -205,13 +205,93 @@
   }
 
   .City_div_img {
-    width: 130px;
+    width: 200px;
     height: 150px;
   }
 
   .pg_no_of_result {
     font-size: 12px;
   }
+
+
+  .City_pg_details{ 
+    width : 230px;
+}
+
+
+  .City_drop {
+    font-size: 12px;
+  }
+}
+
+@media screen and (width<=370px) and (width >=0px) {
+  .City_sort_button {
+    margin-left: 35px;
+  }
+
+  .filter {
+    flex-direction: column;
+  }
+
+  .City_heading2 {
+    padding-left: 7px;
+    padding-top: 25px;
+    font-size: 14px;
+    flex-direction: column;
+  }
+
+  .btnclearfilter {
+    margin-left: 0px;
+    margin-right: 5px;
+  }
+
+  .city_filter_font {
+    font-size: 13px;
+  }
+
+  .City_pg_details {
+    width: 190px;
+  }
+
+  .City_upper {
+    padding-left: 20px;
+    margin-left: 2px;
+  }
+
+  .filter {
+    width: 122px;
+    height: 698px;
+  }
+
+  .pin_search {
+    padding-top: 4.2px;
+    padding-bottom: 3.8px;
+  }
+
+  .pin_enter {
+    width: 85px;
+  }
+
+  .Cities_data {
+    margin-left: 0%;
+    overflow-x: scroll;
+    font-size: 10px;
+  }
+
+  .City_div_img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .pg_no_of_result {
+    font-size: 12px;
+  }
+
+
+  .City_pg_details{ 
+    width : 170px;
+}
+
 
   .City_drop {
     font-size: 12px;
