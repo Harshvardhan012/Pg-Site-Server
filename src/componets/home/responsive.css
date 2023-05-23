@@ -102,10 +102,29 @@
     .component{
         padding: 2px;
     }
-
+    
     .imgs{
         font-size: 13px;
     }
+    .city{
+        width: 280px;
+    }
+
+}
+
+@media screen and (width<310px) {
+    
+    .component{
+        padding: 2px;
+    }
+    
+    .imgs{
+        font-size: 13px;
+    }
+    .city{
+        width: 250px;
+    }
+
 }
 
 
