@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./home.css";
 import "./responsive.css";
 import { city_data } from "../../data/citydata";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
 const Home = (props) => {
   window.scrollTo(0, 0);
 
@@ -28,24 +27,24 @@ const Home = (props) => {
 
   const check = (e) => {
     e.preventDefault();
-    if (!localStorage.getItem("token")) {
-      toast.dismiss();
-      toast.error(`Please Login To Continue`, {
-        position: "top-center",
-        autoClose: 1200,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
-    } else {
-      onchange(e.target.value);
-    }
+    // if (!localStorage.getItem("token")) {
+    //   toast.dismiss();
+    //   toast.error(`Please Login To Continue`, {
+    //     position: "top-center",
+    //     autoClose: 1200,
+    //     hideProgressBar: false,
+    //     closeOnClick: true,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //     theme: "dark",
+    //   });
+    // } else {
+    onchange(e.target.value);
+    // }
   };
 
-  let Navigateor = useNavigate('');
+  let Navigateor = useNavigate("");
 
   const successCallback = async (position) => {
     let response = await fetch(
@@ -55,13 +54,11 @@ const Home = (props) => {
 
     // To get First Word Of city Only
     let user_city = data.address.city;
-    const first = user_city.split(' ').at(0);
+    let first = user_city.split(" ").at(0);
     console.log(first);
-    
+    if (first === "जयपुर") first = "Jaipur";
     Navigateor(`search/${first}`);
   };
-
-
 
   const errorCallback = (error) => {
     switch (error.code) {
@@ -77,9 +74,7 @@ const Home = (props) => {
           progress: undefined,
           theme: "dark",
         });
-        navigator.geolocation.getCurrentPosition(
-            successCallback
-          );
+        navigator.geolocation.getCurrentPosition(successCallback);
         break;
       case error.POSITION_UNAVAILABLE:
         toast.dismiss();
@@ -111,9 +106,27 @@ const Home = (props) => {
 
   const user_location = (e) => {
     e.preventDefault();
-    if (!localStorage.getItem("token")) {
+    // if (!localStorage.getItem("token")) {
+    //   toast.dismiss();
+    //   toast.error(`Please Login To Continue`, {
+    //     position: "top-center",
+    //     autoClose: 1200,
+    //     hideProgressBar: false,
+    //     closeOnClick: true,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //     theme: "dark",
+    //   });
+    // } else {
+    //    To Get User Loaction
+    if (navigator.geolocation) {
+      //returns position(latitude and longitude) or error
+      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    } else {
+      //For old browser i.e IE
       toast.dismiss();
-      toast.error(`Please Login To Continue`, {
+      toast.error(` browser does not support geolocation`, {
         position: "top-center",
         autoClose: 1200,
         hideProgressBar: false,
@@ -123,29 +136,8 @@ const Home = (props) => {
         progress: undefined,
         theme: "dark",
       });
-    } else {
-      //    To Get User Loaction
-      if (navigator.geolocation) {
-        //returns position(latitude and longitude) or error
-        navigator.geolocation.getCurrentPosition(
-          successCallback,
-          errorCallback
-        );
-      } else {
-        //For old browser i.e IE
-        toast.dismiss();
-        toast.error(` browser does not support geolocation`, {
-          position: "top-center",
-          autoClose: 1200,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-        });
-      }
     }
+    // }
   };
 
   return (
@@ -166,7 +158,7 @@ const Home = (props) => {
             className="searchtext"
             name="search"
             value={text}
-            onClick={check}
+            // onClick={check}
             onChange={check}
             autoComplete="off"
           />

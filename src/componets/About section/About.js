@@ -41,7 +41,7 @@ const About = () => {
 
           <div className=''>
             <h1 style={{ color: '#014073' }} className='about_sec_text_head'>
-              Who we do?
+              What we do?
             </h1>
           </div>
 

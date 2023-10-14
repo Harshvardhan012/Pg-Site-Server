@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./pgcites.css";
 import "./PgCitiesResponsive.css";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Pgcites = (props) => {
@@ -14,7 +14,7 @@ const Pgcites = (props) => {
 
   const [search_data, setsearch_data] = useState(da);
   const [citydata, setcitydata] = useState(da);
-  const Navigator = useNavigate();
+  // const Navigator = useNavigate();
 
   const [sort, setsort] = useState(false);
   const [genderfilter, setgenderfilter] = useState("all");
@@ -42,26 +42,26 @@ const Pgcites = (props) => {
   };
 
   useEffect(() => {
-    if (!localStorage.getItem("token")) {
-      Navigator("/");
-      toast.warning(`Please Login to Continue`, {
-        position: "top-right",
-        autoClose: 900,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
-    } 
-    else {
-      setsearch_data(da);
-      var newdata = search_data.filter(function (a) {
-        return a.city.toLowerCase() === `${city.toLowerCase()}`;
-      });
-      setcitydata(newdata);
-    }
+    // if (!localStorage.getItem("token")) {
+    //   Navigator("/");
+    //   toast.warning(`Please Login to Continue`, {
+    //     position: "top-right",
+    //     autoClose: 900,
+    //     hideProgressBar: false,
+    //     closeOnClick: true,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //     theme: "dark",
+    //   });
+    // }
+    // else {
+    setsearch_data(da);
+    var newdata = search_data.filter(function (a) {
+      return a.city.toLowerCase() === `${city.toLowerCase()}`;
+    });
+    setcitydata(newdata);
+    // }
     // eslint-disable-next-line
   }, [props.data]);
 
@@ -337,7 +337,6 @@ const Pgcites = (props) => {
       <div className="d-flex">
         {/* Filter */}
         <div className="filter City_heading">
-
           <div className="City_heading2 ">
             <h3 className="city_filter_heading">Filters</h3>
             <button
@@ -353,9 +352,7 @@ const Pgcites = (props) => {
 
           {/* Gender Filter */}
           <div className="filter1">
-            <h3 className="my-2 city_filter_heading">
-              Gender
-            </h3>
+            <h3 className="my-2 city_filter_heading">Gender</h3>
 
             <div className="form-check ">
               <input
@@ -368,7 +365,6 @@ const Pgcites = (props) => {
               <label
                 className="form-check-label mx-2 city_filter_font"
                 htmlFor="flexRadioDisabled"
-              
               >
                 Male
               </label>
@@ -411,9 +407,7 @@ const Pgcites = (props) => {
 
           {/* Rent Filter */}
           <div className="filter1">
-            <h3 className="my-3 city_filter_heading">
-              Monthly rent
-            </h3>
+            <h3 className="my-3 city_filter_heading">Monthly rent</h3>
 
             <div className="form-check my-2 ">
               <input
@@ -484,10 +478,7 @@ const Pgcites = (props) => {
           {/* Todo Pincode*/}
 
           <div className="filter1">
-            <label
-              htmlFor="number"
-              className="pincode city_filter_heading"
-            >
+            <label htmlFor="number" className="pincode city_filter_heading">
               <b>Search by Pincode</b>
             </label>
             <div className="pin_div">
@@ -514,10 +505,7 @@ const Pgcites = (props) => {
           <div className="City_sort_by_div">
             {/* Upper Section */}
             <div className="City_upper d-flex">
-                
-              <b className="pg_no_of_result">
-                {citydata.length} Result Found{" "}
-              </b>
+              <b className="pg_no_of_result">{citydata.length} Result Found </b>
               <div className="dropdown City_sort_button">
                 <button
                   className=" dropdown-toggle City_drop "
@@ -555,7 +543,7 @@ const Pgcites = (props) => {
             </div>
           </div>
 
-        {/* Pg Data  */}
+          {/* Pg Data  */}
           <div className="container Cities_data">
             {citydata.length > 0 ? (
               sort ? (
@@ -768,7 +756,6 @@ const Pgcites = (props) => {
               <div>No Result Found</div>
             )}
           </div>
-
         </div>
       </div>
     </>

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./details.css";
 import "./details_responsive.css";
+import { toast } from "react-toastify";
 
 const Details = (props) => {
   window.scrollTo(0, 0);
@@ -16,12 +17,12 @@ const Details = (props) => {
   let pg = [];
 
   useEffect(() => {
-    if (!localStorage.getItem("token")) {
+    // if (!localStorage.getItem("token")) {
       
-    } else {
+    // } else {
       setdetails(da);
       setdata(details.find(({ _id }) => _id === val));
-    }
+    // }
 
     // eslint-disable-next-line
   }, [props.data, data]);
@@ -90,7 +91,22 @@ const Details = (props) => {
   //   const closeModal = useRef();
 
   const contact_details = () => {
+     if (!localStorage.getItem("token")) {
+      // Navigator("/");
+      toast.warning(`Please Login to Continue`, {
+        position: "top-right",
+        autoClose: 900,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
+    else {
     openModal.current.click();
+  }
   };
 
   const [pg_name, setpg_name] = useState("");
@@ -105,6 +121,8 @@ const Details = (props) => {
 
   return (
     <>
+      
+
       {/* modal */}
 
       <button

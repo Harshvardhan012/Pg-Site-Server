@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import './header.css'
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import logo from '../../img/logo.png'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -369,19 +369,20 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Home</Link>
+                {/* <NavLink className="nav-link" to="/">Home</NavLink> */}
+                <NavLink  to="/" className={({isActive})=>`nav-link ${isActive?"color":"noncolor"}`}>Home</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/blog">Blog </Link>
+                <NavLink  to="/blog" className={({isActive})=>`nav-link ${isActive?`color`:`noncolor`}`}>Blog </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">Contact Us</Link>
+                <NavLink  to="/contact" className={({isActive})=>`nav-link ${isActive?`color`:`noncolor`}`} >Contact Us</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">About Us</Link>
+                <NavLink to="/about" className={({isActive})=>`nav-link ${isActive?`color`:`noncolor`}`}  >About Us</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/PGowners">For PG Owners</Link>
+                <NavLink to="/PGowners" className={({isActive})=>`nav-link ${isActive?`color`:`noncolor`}`}  >For PG Owners</NavLink>
               </li>
 
             </ul>

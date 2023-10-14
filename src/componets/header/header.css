@@ -43,3 +43,21 @@
     margin-right: 90px;
     cursor: pointer;
 }
+
+.color{
+    font-weight: 1000;
+    color: orange;
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.noncolor{
+    color: #000000;
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-link{
+    color: #000000;
+}
+
