@@ -183,3 +183,11 @@ input[type=number]::-webkit-outer-spin-button {
     color: rgb(4, 16, 115);
     font-Size: 16px;
 }
+
+.loader-pg{
+    display: flex;
+    width: 100%;
+    margin-top: 15rem;
+    align-items: center;
+    justify-content: center;
+}

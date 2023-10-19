@@ -753,7 +753,14 @@ const Pgcites = (props) => {
               )
             ) : (
               // todo
-              <div>No Result Found</div>
+              <div className="loader-pg">
+              <div className="d-flex justify-content-center align-center">
+                <div className="spinner-border" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </div>
+                
+              </div>
+              </div>
             )}
           </div>
         </div>
