@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import datacontext from "../../Context/Data/datacontext";
 import "./pgcites.css";
 import "./PgCitiesResponsive.css";
 // import { toast } from "react-toastify";
@@ -8,13 +9,12 @@ import "react-toastify/dist/ReactToastify.css";
 const Pgcites = (props) => {
   let { city } = useParams();
   let da = props.data;
+  const Context = useContext(datacontext);
+  const { dbdata, getNote } = Context;
 
-  //changes
-  // console.log(da[0]._id);
-
-  const [search_data, setsearch_data] = useState(da);
-  const [citydata, setcitydata] = useState(da);
-  // const Navigator = useNavigate();
+  const [citydata, setcitydata] = useState(props.data);
+  const [search_data, setsearch_data] = useState(props.data);
+  const [len, setlen] = useState(0);
 
   const [sort, setsort] = useState(false);
   const [genderfilter, setgenderfilter] = useState("all");
@@ -38,34 +38,43 @@ const Pgcites = (props) => {
       return a.city.toLowerCase() === `${city.toLowerCase()}`;
     });
     pin.value = "";
+    setgenderfilter("all");
     setcitydata(newdata);
   };
 
   useEffect(() => {
-    // if (!localStorage.getItem("token")) {
-    //   Navigator("/");
-    //   toast.warning(`Please Login to Continue`, {
-    //     position: "top-right",
-    //     autoClose: 900,
-    //     hideProgressBar: false,
-    //     closeOnClick: true,
-    //     pauseOnHover: true,
-    //     draggable: true,
-    //     progress: undefined,
-    //     theme: "dark",
-    //   });
-    // }
-    // else {
-    setsearch_data(da);
-    var newdata = search_data.filter(function (a) {
+    getNote();
+    // eslint-disable-next-line
+  }, []);
+
+  useEffect(() => {
+    let response = dbdata.filter(function (a) {
       return a.city.toLowerCase() === `${city.toLowerCase()}`;
     });
-    setcitydata(newdata);
-    // }
+    setcitydata(response);
+    setsearch_data(dbdata);
     // eslint-disable-next-line
-  }, [props.data]);
+  }, [dbdata]);
+
+  useEffect(() => {
+    setlen(citydata.length);
+    // eslint-disable-next-line
+  }, [citydata]);
 
   let navi = useNavigate();
+
+  const gendercheck = () => {
+    let btn1 = document.getElementById("flexRadioDisabled1");
+    let btn2 = document.getElementById("flexRadioDisabled2");
+    let btn3 = document.getElementById("flexRadioDisabled3");
+
+    if (
+      btn1.checked === false &&
+      btn2.checked === false &&
+      btn3.checked === false
+    )
+      setgenderfilter("all");
+  };
 
   const onselectl = () => {
     setsort(true);
@@ -76,7 +85,6 @@ const Pgcites = (props) => {
   };
 
   const handleclick = (e) => {
-    // console.log(da._id)
   };
 
   const renttogenderfilterswitch = () => {
@@ -137,182 +145,102 @@ const Pgcites = (props) => {
 
   const under5000filter = () => {
     var pincode = pin.value.toString();
-    var newdata;
-    if (genderfilter === "male") {
-      newdata = search_data.filter(function (a) {
-        return (
-          a.Gender.toLowerCase() === "male" &&
-          a.city.toLowerCase() === `${city.toLowerCase()}` &&
-          a.Price < 5000 &&
-          a.pincode.match(pincode)
-        );
-      });
-    } else if (genderfilter === "female") {
-      newdata = search_data.filter(function (a) {
-        return (
-          a.Gender.toLowerCase() === "female" &&
-          a.city.toLowerCase() === `${city.toLowerCase()}` &&
-          a.Price < 5000 &&
-          a.pincode.match(pincode)
-        );
-      });
-    } else if (genderfilter === "unisex") {
-      newdata = search_data.filter(function (a) {
-        return (
-          a.Gender.toLowerCase() === "unisex" &&
-          a.city.toLowerCase() === `${city.toLowerCase()}` &&
-          a.Price < 5000 &&
-          a.pincode.match(pincode)
-        );
-      });
-    } else if (genderfilter === "all") {
-      newdata = search_data.filter(function (a) {
+    gendercheck();
+    var newdata = search_data.filter(function (a) {
+      if (genderfilter === "all") {
         return (
           a.city.toLowerCase() === `${city.toLowerCase()}` &&
           a.Price < 5000 &&
           a.pincode.match(pincode)
         );
-      });
-    }
+      } else {
+        return (
+          a.Gender.toLowerCase() === genderfilter &&
+          a.city.toLowerCase() === `${city.toLowerCase()}` &&
+          a.Price < 5000 &&
+          a.pincode.match(pincode)
+        );
+      }
+    });
     setcitydata(newdata);
   };
 
   const val5000to7500filter = () => {
     var pincode = pin.value.toString();
-    var newdata;
-    if (genderfilter === "male") {
-      newdata = search_data.filter(function (a) {
-        return (
-          a.Gender.toLowerCase() === "male" &&
-          a.city.toLowerCase() === `${city.toLowerCase()}` &&
-          a.Price >= 5000 &&
-          a.Price < 7500 &&
-          a.pincode.match(pincode)
-        );
-      });
-    } else if (genderfilter === "female") {
-      newdata = search_data.filter(function (a) {
-        return (
-          a.Gender.toLowerCase() === "female" &&
-          a.city.toLowerCase() === `${city.toLowerCase()}` &&
-          a.Price >= 5000 &&
-          a.Price < 7500 &&
-          a.pincode.match(pincode)
-        );
-      });
-    } else if (genderfilter === "unisex") {
-      newdata = search_data.filter(function (a) {
-        return (
-          a.Gender.toLowerCase() === "unisex" &&
-          a.city.toLowerCase() === `${city.toLowerCase()}` &&
-          a.Price >= 5000 &&
-          a.Price < 7500 &&
-          a.pincode.match(pincode)
-        );
-      });
-    } else if (genderfilter === "all") {
-      newdata = search_data.filter(function (a) {
+    gendercheck();
+    var newdata = search_data.filter(function (a) {
+      if (genderfilter === "all") {
         return (
           a.city.toLowerCase() === `${city.toLowerCase()}` &&
           a.Price >= 5000 &&
           a.Price < 7500 &&
           a.pincode.match(pincode)
         );
-      });
-    }
+      } else {
+        return (
+          a.Gender.toLowerCase() === genderfilter &&
+          a.city.toLowerCase() === `${city.toLowerCase()}` &&
+          a.Price >= 5000 &&
+          a.Price < 7500 &&
+          a.pincode.match(pincode)
+        );
+      }
+    });
     setcitydata(newdata);
   };
 
   const val7500to10000filter = () => {
     var pincode = pin.value.toString();
-    var newdata;
-    if (genderfilter === "male") {
-      newdata = search_data.filter(function (a) {
-        return (
-          a.Gender.toLowerCase() === "male" &&
-          a.city.toLowerCase() === `${city.toLowerCase()}` &&
-          a.Price >= 7500 &&
-          a.Price < 10000 &&
-          a.pincode.match(pincode)
-        );
-      });
-    } else if (genderfilter === "female") {
-      newdata = search_data.filter(function (a) {
-        return (
-          a.Gender.toLowerCase() === "female" &&
-          a.city.toLowerCase() === `${city.toLowerCase()}` &&
-          a.Price >= 7500 &&
-          a.Price < 10000 &&
-          a.pincode.match(pincode)
-        );
-      });
-    } else if (genderfilter === "unisex") {
-      newdata = search_data.filter(function (a) {
-        return (
-          a.Gender.toLowerCase() === "unisex" &&
-          a.city.toLowerCase() === `${city.toLowerCase()}` &&
-          a.Price >= 7500 &&
-          a.Price < 10000 &&
-          a.pincode.match(pincode)
-        );
-      });
-    } else if (genderfilter === "all") {
-      newdata = search_data.filter(function (a) {
+
+    gendercheck();
+
+    var newdata = search_data.filter(function (a) {
+      if (genderfilter === "all") {
         return (
           a.city.toLowerCase() === `${city.toLowerCase()}` &&
           a.Price >= 7500 &&
           a.Price < 10000 &&
           a.pincode.match(pincode)
         );
-      });
-    }
+      } else {
+        return (
+          a.Gender.toLowerCase() === genderfilter &&
+          a.city.toLowerCase() === `${city.toLowerCase()}` &&
+          a.Price >= 7500 &&
+          a.Price < 10000 &&
+          a.pincode.match(pincode)
+        );
+      }
+    });
     setcitydata(newdata);
   };
 
   const morethan10000filter = () => {
     var pincode = pin.value.toString();
-    var newdata;
-    if (genderfilter === "male") {
-      newdata = search_data.filter(function (a) {
-        return (
-          a.Gender.toLowerCase() === "male" &&
-          a.city.toLowerCase() === `${city.toLowerCase()}` &&
-          a.Price >= 10000 &&
-          a.pincode.match(pincode)
-        );
-      });
-    } else if (genderfilter === "female") {
-      newdata = search_data.filter(function (a) {
-        return (
-          a.Gender.toLowerCase() === "female" &&
-          a.city.toLowerCase() === `${city.toLowerCase()}` &&
-          a.Price >= 10000 &&
-          a.pincode.match(pincode)
-        );
-      });
-    } else if (genderfilter === "unisex") {
-      newdata = search_data.filter(function (a) {
-        return (
-          a.Gender.toLowerCase() === "unisex" &&
-          a.city.toLowerCase() === `${city.toLowerCase()}` &&
-          a.Price >= 10000 &&
-          a.pincode.match(pincode)
-        );
-      });
-    } else if (genderfilter === "all") {
-      newdata = search_data.filter(function (a) {
+    gendercheck();
+
+    var newdata = search_data.filter(function (a) {
+      if (genderfilter === "all") {
         return (
           a.city.toLowerCase() === `${city.toLowerCase()}` &&
           a.Price >= 10000 &&
           a.pincode.match(pincode)
         );
-      });
-    }
+      } else {
+        return (
+          a.Gender.toLowerCase() === genderfilter &&
+          a.city.toLowerCase() === `${city.toLowerCase()}` &&
+          a.Price >= 10000 &&
+          a.pincode.match(pincode)
+        );
+      }
+    });
     setcitydata(newdata);
   };
 
   const search_by_pin = () => {
     var pincode = pin.value.toString();
+    gendercheck();
     var newdata;
     // console.log(genderfilter);
     if (pincode.length > 0 && genderfilter === "all") {
@@ -545,223 +473,230 @@ const Pgcites = (props) => {
 
           {/* Pg Data  */}
           <div className="container Cities_data">
-            {citydata.length > 0 ? (
-              sort ? (
-                citydata
-                  .sort(function (a, b) {
-                    return parseFloat(a.Price) - parseFloat(b.Price);
-                  })
-                  .map((data, k) => {
-                    return (
-                      <div className="City_pg_details" key={k}>
-                        <div className="pg_div container">
-                          <div className="City_div_img">
-                            <img
-                              src={`https://find-my-pg-backend.onrender.com/${data.src1}`}
-                              alt="PICS NOT AVAILABLE"
-                              className="City_pg_img text-center"
-                            />
-                          </div>
+            {citydata.length > 0
+              ? sort
+                ? citydata
+                    .sort(function (a, b) {
+                      return parseFloat(a.Price) - parseFloat(b.Price);
+                    })
+                    .map((data, k) => {
+                      return (
+                        <div className="City_pg_details" key={k}>
+                          <div className="pg_div container">
+                            <div className="City_div_img">
+                              <img
+                                src={`https://find-my-pg-backend.onrender.com/${data.src1}`}
+                                alt="PICS NOT AVAILABLE"
+                                className="City_pg_img text-center"
+                              />
+                            </div>
 
-                          {/*pg name and gender logo  */}
-                          <div className="d-flex">
-                            <div className="City_div_name">
-                              <p>{data.pg_name.substring(0, 30)}</p>
+                            {/*pg name and gender logo  */}
+                            <div className="d-flex">
+                              <div className="City_div_name">
+                                <p>{data.pg_name.substring(0, 30)}</p>
+                              </div>
+                            </div>
+
+                            {/* Gender   */}
+                            <div className="d-flex my-2">
+                              <b>Gender : </b>
+                              {data.Gender.toLowerCase() === "male" && (
+                                <div className="City_div_logo">
+                                  <img
+                                    src="https://bookmypg.co.in/assets/front/images//male-c.svg"
+                                    alt="male"
+                                    height={30}
+                                    width={30}
+                                  />
+                                </div>
+                              )}
+                              {data.Gender.toLowerCase() === "female" && (
+                                <div className="City_div_logo">
+                                  <img
+                                    src="https://bookmypg.co.in/assets/front/images//female-c.svg"
+                                    alt="male"
+                                    height={30}
+                                    width={30}
+                                  />
+                                </div>
+                              )}
+                              {data.Gender.toLowerCase() === "unisex" && (
+                                <div className="City_div_logo">
+                                  <img
+                                    src="https://bookmypg.co.in/assets/front/images//female-c.svg"
+                                    alt="male"
+                                    height={30}
+                                    width={30}
+                                  />
+                                  <img
+                                    src="https://bookmypg.co.in/assets/front/images//male-c.svg"
+                                    className="mx-1"
+                                    alt="male"
+                                    height={30}
+                                    width={30}
+                                  />
+                                </div>
+                              )}
+                            </div>
+
+                            <div className=" d-flex City_div_location">
+                              {/* Address */}
+                              <p>
+                                <b>Location</b> :{" "}
+                                {data.Address.substring(0, 80)}
+                              </p>
+                            </div>
+
+                            {/*Rent Details*/}
+                            <div>
+                              <p>
+                                <b>Rent</b> : {data.Price}
+                              </p>
+                            </div>
+
+                            <div>
+                              {/* pincode */}
+                              <p>
+                                <b>Pincode</b> : {data.pincode}
+                              </p>
+                            </div>
+
+                            {/* View Pg Details Button */}
+                            <div className="div_btn">
+                              <button
+                                className="btn"
+                                onClick={(e) =>
+                                  handleclick(navi(`/pgdetails/${data._id}`))
+                                }
+                              >
+                                View Details
+                              </button>
                             </div>
                           </div>
-
-                          {/* Gender   */}
-                          <div className="d-flex my-2">
-                            <b>Gender : </b>
-                            {data.Gender.toLowerCase() === "male" && (
-                              <div className="City_div_logo">
-                                <img
-                                  src="https://bookmypg.co.in/assets/front/images//male-c.svg"
-                                  alt="male"
-                                  height={30}
-                                  width={30}
-                                />
-                              </div>
-                            )}
-                            {data.Gender.toLowerCase() === "female" && (
-                              <div className="City_div_logo">
-                                <img
-                                  src="https://bookmypg.co.in/assets/front/images//female-c.svg"
-                                  alt="male"
-                                  height={30}
-                                  width={30}
-                                />
-                              </div>
-                            )}
-                            {data.Gender.toLowerCase() === "unisex" && (
-                              <div className="City_div_logo">
-                                <img
-                                  src="https://bookmypg.co.in/assets/front/images//female-c.svg"
-                                  alt="male"
-                                  height={30}
-                                  width={30}
-                                />
-                                <img
-                                  src="https://bookmypg.co.in/assets/front/images//male-c.svg"
-                                  className="mx-1"
-                                  alt="male"
-                                  height={30}
-                                  width={30}
-                                />
-                              </div>
-                            )}
-                          </div>
-
-                          <div className=" d-flex City_div_location">
-                            {/* Address */}
-                            <p>
-                              <b>Location</b> : {data.Address.substring(0, 80)}
-                            </p>
-                          </div>
-
-                          {/*Rent Details*/}
-                          <div>
-                            <p>
-                              <b>Rent</b> : {data.Price}
-                            </p>
-                          </div>
-
-                          <div>
-                            {/* pincode */}
-                            <p>
-                              <b>Pincode</b> : {data.pincode}
-                            </p>
-                          </div>
-
-                          {/* View Pg Details Button */}
-                          <div className="div_btn">
-                            <button
-                              className="btn"
-                              onClick={(e) =>
-                                handleclick(navi(`/pgdetails/${data._id}`))
-                              }
-                            >
-                              View Details
-                            </button>
-                          </div>
                         </div>
-                      </div>
-                    );
-                  })
-              ) : (
-                citydata
-                  .sort(function (a, b) {
-                    return parseFloat(b.Price) - parseFloat(a.Price);
-                  })
-                  .map((data, k) => {
-                    return (
-                      <div className="City_pg_details" key={k}>
-                        <div className="pg_div">
-                          <div className="City_div_img">
-                            <img
-                              src={`https://find-my-pg-backend.onrender.com/${data.src1}`}
-                              alt="PICS NOT AVAILABLE"
-                              className="City_pg_img text-center"
-                            />
-                          </div>
+                      );
+                    })
+                : citydata
+                    .sort(function (a, b) {
+                      return parseFloat(b.Price) - parseFloat(a.Price);
+                    })
+                    .map((data, k) => {
+                      return (
+                        <div className="City_pg_details" key={k}>
+                          <div className="pg_div">
+                            <div className="City_div_img">
+                              <img
+                                src={`https://find-my-pg-backend.onrender.com/${data.src1}`}
+                                alt="PICS NOT AVAILABLE"
+                                className="City_pg_img text-center"
+                              />
+                            </div>
 
-                          {/*pg name and gender logo  */}
-                          <div className="City_div_name_logo d-flex">
-                            <div className="City_div_name">
-                              <p>{data.pg_name.substring(0, 30)}</p>
+                            {/*pg name and gender logo  */}
+                            <div className="City_div_name_logo d-flex">
+                              <div className="City_div_name">
+                                <p>{data.pg_name.substring(0, 30)}</p>
+                              </div>
+                            </div>
+
+                            {/* Gender   */}
+                            <div className="d-flex my-2">
+                              <b>Gender : </b>
+                              {data.Gender.toLowerCase() === "male" && (
+                                <div className="City_div_logo">
+                                  <img
+                                    src="https://bookmypg.co.in/assets/front/images//male-c.svg"
+                                    alt="male"
+                                    height={30}
+                                    width={30}
+                                  />
+                                </div>
+                              )}
+                              {data.Gender.toLowerCase() === "female" && (
+                                <div className="City_div_logo">
+                                  <img
+                                    src="https://bookmypg.co.in/assets/front/images//female-c.svg"
+                                    alt="male"
+                                    height={30}
+                                    width={30}
+                                  />
+                                </div>
+                              )}
+                              {data.Gender.toLowerCase() === "unisex" && (
+                                <div className="City_div_logo">
+                                  <img
+                                    src="https://bookmypg.co.in/assets/front/images//female-c.svg"
+                                    alt="male"
+                                    height={30}
+                                    width={30}
+                                  />
+                                  <img
+                                    src="https://bookmypg.co.in/assets/front/images//male-c.svg"
+                                    className="mx-1"
+                                    alt="male"
+                                    height={30}
+                                    width={30}
+                                  />
+                                </div>
+                              )}
+                            </div>
+
+                            <div className=" d-flex City_div_location">
+                              {/* Addrress */}
+                              <p>
+                                <b>Location</b> :{" "}
+                                {data.Address.substring(0, 80)}
+                              </p>
+                            </div>
+
+                            {/*Rent Details*/}
+                            <div>
+                              <p>
+                                <b>Pincode</b> : {data.pincode}
+                              </p>
+                            </div>
+
+                            {/*Rent Details*/}
+                            <div>
+                              <p>
+                                <b>Rent</b> : {data.Price}
+                              </p>
+                            </div>
+
+                            {/* View Pg Details Button */}
+                            <div className="div_btn">
+                              <button
+                                className="btn"
+                                onClick={(e) =>
+                                  handleclick(navi(`/pgdetails/${data._id}`))
+                                }
+                              >
+                                View Details
+                              </button>
                             </div>
                           </div>
-
-                          {/* Gender   */}
-                          <div className="d-flex my-2">
-                            <b>Gender : </b>
-                            {data.Gender.toLowerCase() === "male" && (
-                              <div className="City_div_logo">
-                                <img
-                                  src="https://bookmypg.co.in/assets/front/images//male-c.svg"
-                                  alt="male"
-                                  height={30}
-                                  width={30}
-                                />
-                              </div>
-                            )}
-                            {data.Gender.toLowerCase() === "female" && (
-                              <div className="City_div_logo">
-                                <img
-                                  src="https://bookmypg.co.in/assets/front/images//female-c.svg"
-                                  alt="male"
-                                  height={30}
-                                  width={30}
-                                />
-                              </div>
-                            )}
-                            {data.Gender.toLowerCase() === "unisex" && (
-                              <div className="City_div_logo">
-                                <img
-                                  src="https://bookmypg.co.in/assets/front/images//female-c.svg"
-                                  alt="male"
-                                  height={30}
-                                  width={30}
-                                />
-                                <img
-                                  src="https://bookmypg.co.in/assets/front/images//male-c.svg"
-                                  className="mx-1"
-                                  alt="male"
-                                  height={30}
-                                  width={30}
-                                />
-                              </div>
-                            )}
-                          </div>
-
-                          <div className=" d-flex City_div_location">
-                            {/* Addrress */}
-                            <p>
-                              <b>Location</b> : {data.Address.substring(0, 80)}
-                            </p>
-                          </div>
-
-                          {/*Rent Details*/}
-                          <div>
-                            <p>
-                              <b>Pincode</b> : {data.pincode}
-                            </p>
-                          </div>
-
-                          {/*Rent Details*/}
-                          <div>
-                            <p>
-                              <b>Rent</b> : {data.Price}
-                            </p>
-                          </div>
-
-                          {/* View Pg Details Button */}
-                          <div className="div_btn">
-                            <button
-                              className="btn"
-                              onClick={(e) =>
-                                handleclick(navi(`/pgdetails/${data._id}`))
-                              }
-                            >
-                              View Details
-                            </button>
-                          </div>
                         </div>
-                      </div>
-                    );
-                  })
-              )
-            ) : (
-              // todo
-              <div className="loader-pg">
-              <div className="d-flex justify-content-center align-center">
-                <div className="spinner-border" role="status">
-                  <span className="visually-hidden">Loading...</span>
-                </div>
-                
-              </div>
-              </div>
-            )}
+                      );
+                    })
+              : // todo
+
+                (setTimeout(() => {
+                  setlen(10);
+                }, 2500),
+                (
+                  <div className="loader-pg">
+                    <div className="d-flex justify-content-center align-center">
+                      {len === 0 ? (
+                        <div className="spinner-border" role="status">
+                          <span className="visually-hidden">Loading...</span>
+                        </div>
+                      ) : (
+                        <span>No Result Found</span>
+                      )}
+                    </div>
+                  </div>
+                ))}
           </div>
         </div>
       </div>
