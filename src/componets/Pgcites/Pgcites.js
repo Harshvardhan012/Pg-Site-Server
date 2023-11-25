@@ -473,7 +473,7 @@ const Pgcites = (props) => {
 
           {/* Pg Data  */}
           <div className="container Cities_data">
-            {citydata.length > 0
+            {len != 0
               ? sort
                 ? citydata
                     .sort(function (a, b) {
@@ -681,13 +681,13 @@ const Pgcites = (props) => {
                     })
               : // todo
 
-                (setTimeout(() => {
+                (len === 0 && setTimeout(() => {
                   setlen(10);
-                }, 2500),
+                }, 50000),
                 (
                   <div className="loader-pg">
                     <div className="d-flex justify-content-center align-center">
-                      {len === 0 ? (
+                      {citydata.length === 0  && len === 0? (
                         <div className="spinner-border" role="status">
                           <span className="visually-hidden">Loading...</span>
                         </div>
@@ -696,7 +696,8 @@ const Pgcites = (props) => {
                       )}
                     </div>
                   </div>
-                ))}
+                )
+                )}
           </div>
         </div>
       </div>
